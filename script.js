@@ -34,3 +34,25 @@ document.querySelectorAll('[data-zoom]').forEach((button) => button.addEventList
   anatomyImage.style.transform = `scale(${zoom})`;
   stageState.textContent = `${document.querySelector('.hotspot.selected')?.dataset.member || 'معده'} انتخاب شده • ${Math.round(zoom * 100)}٪`;
 }));
+
+const filterToggle = document.querySelector('[data-filter-toggle]');
+const doctorFilters = document.querySelector('.doctor-filters');
+filterToggle?.addEventListener('click', () => {
+  const isHidden = doctorFilters.hidden;
+  doctorFilters.hidden = !isHidden;
+  filterToggle.querySelector('b').textContent = isHidden ? '⌃' : '⌄';
+});
+
+document.querySelectorAll('.filter-chip').forEach((filter) => filter.addEventListener('click', () => {
+  document.querySelectorAll('.filter-chip').forEach((item) => item.classList.toggle('active', item === filter));
+}));
+
+document.querySelector('[data-show-doctors]')?.addEventListener('click', (event) => {
+  document.querySelectorAll('.extra-doctor').forEach((card) => { card.hidden = false; });
+  event.currentTarget.hidden = true;
+});
+
+document.querySelectorAll('[data-appointment], [data-course]').forEach((button) => button.addEventListener('click', () => {
+  button.textContent = 'به‌زودی فعال می‌شود';
+  button.disabled = true;
+}));
