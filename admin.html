@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1b4332" />
+  <meta name="description" content="پنل مدیریت آزمایشی مهریار" />
+  <title>پنل مدیریت | مهریار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="index.html"><span>⌁</span><strong>مهریار<small>پنل مدیریت آزمایشی</small></strong></a>
+    <nav aria-label="ناوبری پنل"><a class="active" href="admin.html">نمای کلی</a><a href="dashboard.html">پنل کاربری</a><a href="clinics.html">نوبت‌ها</a><a href="courses.html">دوره‌ها</a></nav>
+    <a class="back-link" href="index.html">مشاهده سایت <b>←</b></a>
+  </header>
+  <main>
+    <section class="intro"><div><p>مدیریت محتوا و درخواست‌ها</p><h1>نمای کلی مهریار</h1><span>این پنل با داده‌های آزمایشی ذخیره‌شده در همین مرورگر کار می‌کند.</span></div><span class="mode">حالت آزمایشی</span></section>
+    <section class="metrics" aria-label="آمار پنل">
+      <article><span>دوره‌های فعال</span><strong id="course-count">۰</strong><small>کاتالوگ آموزشی</small></article>
+      <article><span>ثبت‌نام محلی</span><strong id="enrollment-count">۰</strong><small>در این مرورگر</small></article>
+      <article><span>درخواست نوبت</span><strong id="appointment-count">۰</strong><small>ثبت‌شده در مرورگر</small></article>
+      <article><span>پیشرفت یادگیری</span><strong id="progress-count">۰٪</strong><small>دورهٔ ثبت‌نام‌شده</small></article>
+    </section>
+    <section class="admin-grid">
+      <article class="panel requests"><div class="panel-heading"><div><p>پیگیری درخواست</p><h2>آخرین نوبت</h2></div><span class="status" id="appointment-status">بدون درخواست</span></div><div class="detail-state" id="appointment-detail"><span>◌</span><p>هنوز درخواست نوبتی در این مرورگر ثبت نشده است.</p></div><a href="clinics.html">مدیریت زمان‌های نوبت <b>←</b></a></article>
+      <article class="panel learning"><div class="panel-heading"><div><p>محتوای آموزشی</p><h2>دورهٔ ثبت‌نام‌شده</h2></div><span class="status" id="course-status">بدون ثبت‌نام</span></div><div class="detail-state" id="course-detail"><span>▣</span><p>برای مشاهدهٔ جزئیات، یک دوره از کاتالوگ انتخاب کنید.</p></div><a href="courses.html">مدیریت کاتالوگ دوره‌ها <b>←</b></a></article>
+    </section>
+    <section class="panel tools"><div class="panel-heading"><div><p>ابزارهای محلی</p><h2>مدیریت دادهٔ آزمایشی</h2></div></div><p>تنها داده‌های دمو در همین مرورگر حذف می‌شوند؛ این عملیات روی اطلاعات واقعی سرور اثری ندارد.</p><div class="tool-actions"><button type="button" id="clear-booking">پاک‌کردن درخواست نوبت</button><button type="button" id="clear-learning">پاک‌کردن ثبت‌نام دوره</button><button type="button" class="danger" id="clear-all">پاک‌کردن همه داده‌های دمو</button></div><p class="status-message" id="status-message" role="status"></p></section>
+  </main>
+  <script src="admin.js" defer></script>
+</body>
+</html>
