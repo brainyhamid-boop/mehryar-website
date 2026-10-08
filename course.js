@@ -24,5 +24,6 @@ document.getElementById('lesson-list').replaceChildren(...course.lessons.map((le
 
 document.getElementById('enroll-button').addEventListener('click', () => {
   localStorage.setItem('mehryar-course', JSON.stringify({ key: key && courses[key] ? key : 'lifestyle', title: course.title, status: 'enrolled' }));
-  document.getElementById('enroll-status').textContent = 'ثبت‌نام آزمایشی انجام شد. از پروفایل می‌توانید وضعیت دوره را ببینید.';
+  const profile = (() => { try { return JSON.parse(localStorage.getItem('mehryar-profile') || '{}'); } catch { return {}; } })();
+  window.location.href = profile.authenticated ? 'dashboard.html' : 'profile.html';
 });

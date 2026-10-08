@@ -16,7 +16,14 @@ fields.forEach((name) => { if (profile[name]) form.elements[name].value = profil
 const appointment = readStored('mehryar-appointment');
 if (appointment.fullName) {
   document.getElementById('appointment-title').textContent = 'درخواست نوبت شما ثبت شده';
-  document.getElementById('appointment-details').innerHTML = `<span>${appointment.clinic}</span><strong>${appointment.time}</strong><span>${appointment.fullName} · ${appointment.mobile}</span>`;
+  const details = document.getElementById('appointment-details');
+  const clinicName = document.createElement('span');
+  const visitTime = document.createElement('strong');
+  const patient = document.createElement('span');
+  clinicName.textContent = appointment.clinic;
+  visitTime.textContent = appointment.time;
+  patient.textContent = `${appointment.fullName} · ${appointment.mobile}`;
+  details.replaceChildren(clinicName, visitTime, patient);
 }
 
 form.addEventListener('submit', (event) => {
@@ -26,6 +33,6 @@ form.addEventListener('submit', (event) => {
   const nationalId = normalizeDigits(data.nationalId);
   if (!/^09\d{9}$/.test(mobile)) { status.textContent = 'شماره همراه را با ۱۱ رقم وارد کنید.'; return; }
   if (nationalId && !/^\d{10}$/.test(nationalId)) { status.textContent = 'کد ملی باید ۱۰ رقم باشد.'; return; }
-  localStorage.setItem('mehryar-profile', JSON.stringify({ ...data, mobile, nationalId }));
-  status.textContent = 'اطلاعات شما در این مرورگر ذخیره شد.';
+  localStorage.setItem('mehryar-profile', JSON.stringify({ ...data, mobile, nationalId, authenticated: true }));
+  window.location.href = 'dashboard.html';
 });
