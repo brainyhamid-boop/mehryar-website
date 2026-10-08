@@ -6,7 +6,8 @@ const courses = {
 };
 
 const key = new URLSearchParams(window.location.search).get('course');
-const course = courses[key] || courses.lifestyle;
+const activeKey = courses[key] ? key : 'lifestyle';
+const course = courses[activeKey];
 document.title = `${course.title} | مهریار`;
 document.getElementById('course-artwork').src = `public/figma-assets/${course.image}`;
 document.getElementById('course-artwork').alt = `تصویر دوره ${course.title}`;
@@ -16,9 +17,12 @@ document.getElementById('course-description').textContent = course.description;
 document.getElementById('course-duration').textContent = course.duration;
 document.getElementById('enroll-price').textContent = course.price;
 document.getElementById('enroll-note').textContent = course.note;
-document.getElementById('lesson-list').replaceChildren(...course.lessons.map((lesson) => {
+document.getElementById('lesson-list').replaceChildren(...course.lessons.map((lesson, index) => {
   const item = document.createElement('li');
-  item.textContent = lesson;
+  const link = document.createElement('a');
+  link.href = `lesson.html?course=${activeKey}&lesson=${index + 1}`;
+  link.textContent = lesson;
+  item.append(link);
   return item;
 }));
 

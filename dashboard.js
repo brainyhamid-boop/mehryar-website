@@ -1,8 +1,8 @@
 const courseDetails = {
-  lifestyle: { image: 'figma-Course-artwork-17.png', href: 'course.html?course=lifestyle' },
-  seasonal: { image: 'figma-Course-artwork-18.png', href: 'course.html?course=seasonal' },
-  temperament: { image: 'figma-Course-artwork-19.png', href: 'course.html?course=temperament' },
-  visit: { image: 'figma-Course-artwork-20.png', href: 'course.html?course=visit' }
+  lifestyle: { image: 'figma-Course-artwork-17.png', href: 'lesson.html?course=lifestyle&lesson=1' },
+  seasonal: { image: 'figma-Course-artwork-18.png', href: 'lesson.html?course=seasonal&lesson=1' },
+  temperament: { image: 'figma-Course-artwork-19.png', href: 'lesson.html?course=temperament&lesson=1' },
+  visit: { image: 'figma-Course-artwork-20.png', href: 'lesson.html?course=visit&lesson=1' }
 };
 
 function readStored(key) {
