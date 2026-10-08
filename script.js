@@ -205,7 +205,21 @@ function closeAssessment() {
 assessmentDialog?.addEventListener('close', closeAssessment);
 document.querySelector('.close-dialog')?.addEventListener('click', () => assessmentDialog.close());
 
-document.querySelectorAll('[data-start-assessment]').forEach((button) => button.addEventListener('click', () => openAssessment({ trigger: button })));
+document.querySelectorAll('.gender-button').forEach((button) => button.addEventListener('click', () => {
+  document.querySelectorAll('.gender-button').forEach((item) => {
+    const active = item === button;
+    item.classList.toggle('active', active);
+    item.setAttribute('aria-pressed', String(active));
+  });
+  showToast(`نمای ${button.textContent.trim()} اطلس انتخاب شد.`);
+}));
+
+document.querySelector('.newsletter-form')?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  showToast('فرم خبرنامه در نسخهٔ بعدی به سیستم پیام‌رسانی متصل می‌شود.');
+});
+
+
 document.querySelectorAll('[data-symptom]').forEach((button) => button.addEventListener('click', () => openAssessment({ symptom: button.dataset.symptom, trigger: button })));
 document.querySelectorAll('[data-region]').forEach((button) => button.addEventListener('click', () => openAssessment({ region: button.dataset.region, trigger: button })));
 

@@ -15,19 +15,24 @@
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
 
   <header class="site-header" id="top">
+    <div class="utility-bar">
+      <div class="utility-shell">
+        <span><strong>خط ویژه مهریار</strong> ۰۲۱-۸۸۸۸۴۳۲۱</span>
+        <span class="utility-hours">پاسخگویی هر روز، ۸ تا ۲۱</span>
+        <span class="utility-links"><a href="#footer-contact">پشتیبانی ایتا و تلگرام</a><a href="#providers">ورود پزشکان</a><span>تهران <i></i></span></span>
+      </div>
+    </div>
     <div class="nav-shell">
       <a class="brand" href="#top" aria-label="مهریار، خانه">
         <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4.5c7.2 0 13 5.8 13 13v4.1c0 8-5.4 14.8-13 17.4-7.6-2.6-13-9.4-13-17.4v-4.1c0-7.2 5.8-13 13-13Z"/><path d="M15 22h14M22 15v14"/></svg>
-        <span>مهریار</span>
+        <span>مهریار <small>سلامت ایرانی</small></span>
       </a>
-
       <nav class="desktop-nav" aria-label="ناوبری اصلی">
         <a href="#assessment">حل مشکل</a>
         <a href="#education">آموزش</a>
         <a href="#providers">پزشکان</a>
         <a href="#courses">دوره‌ها</a>
       </nav>
-
       <div class="nav-actions">
         <button class="text-button account-trigger" type="button" data-unavailable="حساب کاربری پس از آماده‌شدن زیرساخت امن اطلاعات سلامت فعال می‌شود.">حساب من</button>
         <button class="button button-primary nav-cta" type="button" data-start-assessment>شروع بررسی</button>
@@ -59,24 +64,39 @@
 
       <div class="body-explorer" aria-labelledby="body-explorer-title">
         <div class="explorer-heading">
-          <div><p class="eyebrow">شروع از بدن</p><h2 id="body-explorer-title">ناحیه‌ای را که با آن درگیر هستید انتخاب کنید.</h2></div>
-          <span class="explorer-status"><i></i> انتخاب ناحیه</span>
+          <div><p class="eyebrow">اطلس سلامت مهریار</p><h2 id="body-explorer-title">ناحیه‌ای را که با آن درگیر هستید انتخاب کنید.</h2></div>
+          <div class="explorer-controls">
+            <div class="gender-toggle" role="group" aria-label="انتخاب مدل اطلس">
+              <button type="button" class="gender-button active" data-gender="male" aria-pressed="true">آقا</button>
+              <button type="button" class="gender-button" data-gender="female" aria-pressed="false">خانم</button>
+            </div>
+            <span class="explorer-status"><i></i> انتخاب ناحیه</span>
+          </div>
         </div>
         <div class="body-map-area">
-          <svg class="body-map" viewBox="0 0 280 430" role="img" aria-label="تصویر شماتیک بدن انسان، برای انتخاب ناحیه بدن از دکمه‌های اطراف استفاده کنید.">
-            <defs><linearGradient id="bodyFill" x1="0" x2="1"><stop stop-color="#E7ECE1"/><stop offset="1" stop-color="#D4DFD0"/></linearGradient></defs>
-            <circle cx="140" cy="55" r="35" fill="url(#bodyFill)"/><path d="M115 93c-9 11-14 28-15 53l-10 93c-2 20 12 36 32 36h36c20 0 34-16 32-36l-10-93c-1-25-6-42-15-53H115Z" fill="url(#bodyFill)"/>
-            <path d="M104 113c-24 11-34 43-36 84l-3 53c-1 16 8 27 21 28 11 1 20-7 21-20l5-65 10-40" fill="url(#bodyFill)"/><path d="M176 113c24 11 34 43 36 84l3 53c1 16-8 27-21 28-11 1-20-7-21-20l-5-65-10-40" fill="url(#bodyFill)"/>
-            <path d="M111 269 98 390c-2 17 8 29 22 30 14 1 23-9 24-25l5-94h-38Z" fill="url(#bodyFill)"/><path d="m169 269 13 121c2 17-8 29-22 30-14 1-23-9-24-25l-5-94h38Z" fill="url(#bodyFill)"/>
-            <path d="M121 136c12-6 26-6 38 0M116 198c15 8 33 8 48 0" fill="none" stroke="#A7B8A4" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+          <div class="map-glow" aria-hidden="true"></div>
           <div class="map-halo halo-one" aria-hidden="true"></div><div class="map-halo halo-two" aria-hidden="true"></div>
-          <div class="body-region-list" aria-label="ناحیه‌های قابل انتخاب بدن">
-            <button type="button" class="region-button region-head" data-region="سر و گردن"><span class="region-dot"></span>سر و گردن</button>
-            <button type="button" class="region-button region-chest" data-region="قفسه سینه"><span class="region-dot"></span>قفسه سینه</button>
-            <button type="button" class="region-button region-digestive" data-region="گوارش"><span class="region-dot"></span>گوارش</button>
-            <button type="button" class="region-button region-limbs" data-region="اندام‌ها"><span class="region-dot"></span>اندام‌ها</button>
-          </div>
+          <svg class="body-map" viewBox="0 0 280 430" role="img" aria-label="اطلس شماتیک بدن انسان؛ برای دیدن توضیح هر ناحیه روی نقطه‌های روی بدن ضربه بزنید.">
+            <defs>
+              <linearGradient id="bodyFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F3EEE1"/><stop offset="1" stop-color="#DBE4D6"/></linearGradient>
+              <radialGradient id="chestGlow" cx="50%" cy="45%" r="55%"><stop stop-color="#52B788" stop-opacity=".38"/><stop offset="1" stop-color="#52B788" stop-opacity="0"/></radialGradient>
+            </defs>
+            <circle class="body-glow-chest" cx="140" cy="150" r="72" fill="url(#chestGlow)"/>
+            <circle cx="140" cy="55" r="35" fill="url(#bodyFill)"/>
+            <path d="M115 93c-9 11-14 28-15 53l-10 93c-2 20 12 36 32 36h36c20 0 34-16 32-36l-10-93c-1-25-6-42-15-53H115Z" fill="url(#bodyFill)"/>
+            <path d="M104 113c-24 11-34 43-36 84l-3 53c-1 16 8 27 21 28 11 1 20-7 21-20l5-65 10-40" fill="url(#bodyFill)"/>
+            <path d="M176 113c24 11 34 43 36 84l3 53c1 16-8 27-21 28-11 1-20-7-21-20l-5-65-10-40" fill="url(#bodyFill)"/>
+            <path d="M111 269 98 390c-2 17 8 29 22 30 14 1 23-9 24-25l5-94h-38Z" fill="url(#bodyFill)"/>
+            <path d="m169 269 13 121c2 17-8 29-22 30-14 1-23-9-24-25l-5-94h38Z" fill="url(#bodyFill)"/>
+            <circle class="body-joint q1" cx="96" cy="128" r="12" fill="url(#bodyFill)"/>
+            <circle class="body-joint q2" cx="184" cy="128" r="12" fill="url(#bodyFill)"/>
+            <path class="body-rim" d="M115 93c-9 11-14 28-15 53l-10 93c-2 20 12 36 32 36h36c20 0 34-16 32-36l-10-93c-1-25-6-42-15-53H115Z" fill="none"/>
+          </svg>
+          <button type="button" class="hotspot hotspot-head" data-region="سر و گردن" aria-label="سر و گردن"><span class="hotspot-dot"></span><span class="hotspot-label">سر و گردن</span></button>
+          <button type="button" class="hotspot hotspot-chest" data-region="قفسه سینه و قلب" aria-label="قفسه سینه و قلب"><span class="hotspot-dot"></span><span class="hotspot-label">قفسه سینه</span></button>
+          <button type="button" class="hotspot hotspot-digestive" data-region="گوارش و کبد" aria-label="گوارش و کبد"><span class="hotspot-dot"></span><span class="hotspot-label">گوارش و کبد</span></button>
+          <button type="button" class="hotspot hotspot-spine" data-region="ستون فقرات" aria-label="ستون فقرات"><span class="hotspot-dot"></span><span class="hotspot-label">ستون فقرات</span></button>
+          <button type="button" class="hotspot hotspot-knee" data-region="زانو و اندام‌ها" aria-label="زانو و اندام‌ها"><span class="hotspot-dot"></span><span class="hotspot-label">زانو</span></button>
         </div>
         <div class="explorer-footer"><p>این انتخاب برای شروع پرسش‌های آموزشی است، نه تشخیص.</p><button class="inline-link" type="button" data-start-assessment>نشانه را بنویسم <span aria-hidden="true">←</span></button></div>
       </div>
@@ -131,7 +151,7 @@
     <section class="brand-story section" aria-labelledby="brand-title"><p class="eyebrow">درباره مهریار</p><h2 id="brand-title">مهریار برای ساده‌تر کردن نقطه شروع ساخته می‌شود.</h2><p>از ثبت نشانه تا پیدا کردن آموزش و مسیر پیگیری، همه‌چیز باید روشن، انسانی و متناسب با زبان فارسی باشد.</p><small>محصولی از نفیس طب حکیم</small></section>
   </main>
 
-  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4.5c7.2 0 13 5.8 13 13v4.1c0 8-5.4 14.8-13 17.4-7.6-2.6-13-9.4-13-17.4v-4.1c0-7.2 5.8-13 13-13Z"/><path d="M15 22h14M22 15v14"/></svg><span>مهریار</span></a><p>پلتفرم راهنمای سلامت فارسی</p></div><div class="footer-links"><a href="#assessment">شروع راهنمایی</a><a href="#education">آموزش</a><a href="#providers">پزشکان</a><button type="button" data-unavailable="سیاست حریم خصوصی پیش از فعال‌شدن هر قابلیت ذخیره داده منتشر خواهد شد.">حریم خصوصی</button></div><p class="medical-disclaimer"><strong>توجه:</strong> محتوای مهریار آموزشی است و جایگزین تشخیص، درمان یا توصیه پزشک نیست. اگر نشانه شدید، ناگهانی یا نگران‌کننده دارید، از خدمات فوریت‌های پزشکی یا پزشک کمک بگیرید.</p></footer>
+  <footer class="site-footer" id="footer-contact"><div class="footer-brand"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4.5c7.2 0 13 5.8 13 13v4.1c0 8-5.4 14.8-13 17.4-7.6-2.6-13-9.4-13-17.4v-4.1c0-7.2 5.8-13 13-13Z"/><path d="M15 22h14M22 15v14"/></svg><span>مهریار <small>سلامت ایرانی</small></span></a><p>پایگاه جامع سلامت و آموزش طب ایرانی، با تمرکز بر شروعی روشن و مسئولانه.</p><form class="newsletter-form"><label for="newsletter">پیام سلامت و تدابیر فصلی</label><div><input id="newsletter" type="tel" placeholder="شماره همراه شما" /><button class="button button-primary" type="submit">عضویت</button></div></form></div><div class="footer-column"><h3>دسترسی سریع</h3><a href="#assessment">اطلس علائم بدن</a><a href="#providers">رزرو نوبت حضوری</a><a href="#courses">کاتالوگ دوره‌ها</a><a href="#education">پرسش‌های متداول</a></div><div class="footer-column"><h3>مراکز مهریار</h3><p>مرکز ونک<br />میدان ونک، خیابان ملاصدرا، پلاک ۲۴</p><p>مرکز نیاوران<br />خیابان باهنر، مجتمع سلامت ایرانیان</p><a href="tel:+982188884321">۰۲۱-۸۸۸۸۴۳۲۱</a></div><div class="footer-column"><h3>ارتباط با ما</h3><a href="mailto:support@mehryar.ir">support@mehryar.ir</a><a href="#footer-contact">ایتا: @mehryar_teb</a><a href="#footer-contact">تلگرام: @mehryar_health</a><a href="#footer-contact">اینستاگرام: @mehryar.ir</a></div><div class="trust-badges"><span>نماد اعتماد الکترونیکی</span><span>مجوز نظام پزشکی</span><span>پرداخت امن شاپرک</span></div><p class="medical-disclaimer"><strong>توجه پزشکی:</strong> خدمات مهریار صرفاً برای ناوبری و آموزش است و جایگزین تشخیص یا درمان نیست. در موارد حاد قلبی، سکته، تشنج یا تنگی نفس شدید، بلافاصله با اورژانس ۱۱۵ تماس بگیرید.</p></footer>
 
   <nav class="bottom-nav" aria-label="ناوبری پایین موبایل"><a class="active" href="#top"><span aria-hidden="true">⌂</span>خانه</a><button type="button" data-start-assessment><span aria-hidden="true">＋</span>حل مشکل</button><a href="#education"><span aria-hidden="true">▤</span>آموزش</a><a href="#providers"><span aria-hidden="true">♧</span>پزشکان</a><button type="button" data-unavailable="حساب کاربری پس از آماده‌شدن زیرساخت امن اطلاعات سلامت فعال می‌شود."><span aria-hidden="true">◌</span>حساب من</button></nav>
 
