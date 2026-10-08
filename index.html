@@ -3,160 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#24322B" />
-  <meta name="description" content="مهریار؛ نقطه شروعی برای ثبت نشانه‌ها، دریافت راهنمای آموزشی و شناخت مسیر پیگیری بعدی." />
-  <title>مهریار | از نشانه تا قدم بعدی</title>
+  <meta name="theme-color" content="#1b4332" />
+  <meta name="description" content="مهریار؛ اطلس بالینی و آموزشی طب ایرانی." />
+  <title>مهریار | اطلس بالینی و آموزشی</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
-
   <header class="site-header" id="top">
-    <div class="utility-bar">
-      <div class="utility-shell">
-        <span><strong>خط ویژه مهریار</strong> ۰۲۱-۸۸۸۸۴۳۲۱</span>
-        <span class="utility-hours">پاسخگویی هر روز، ۸ تا ۲۱</span>
-        <span class="utility-links"><a href="#footer-contact">پشتیبانی ایتا و تلگرام</a><a href="#providers">ورود پزشکان</a><span>تهران <i></i></span></span>
-      </div>
-    </div>
-    <div class="nav-shell">
-      <a class="brand" href="#top" aria-label="مهریار، خانه">
-        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4.5c7.2 0 13 5.8 13 13v4.1c0 8-5.4 14.8-13 17.4-7.6-2.6-13-9.4-13-17.4v-4.1c0-7.2 5.8-13 13-13Z"/><path d="M15 22h14M22 15v14"/></svg>
-        <span>مهریار <small>سلامت ایرانی</small></span>
-      </a>
-      <nav class="desktop-nav" aria-label="ناوبری اصلی">
-        <a href="#assessment">حل مشکل</a>
-        <a href="#education">آموزش</a>
-        <a href="#providers">پزشکان</a>
-        <a href="#courses">دوره‌ها</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="text-button account-trigger" type="button" data-unavailable="حساب کاربری پس از آماده‌شدن زیرساخت امن اطلاعات سلامت فعال می‌شود.">حساب من</button>
-        <button class="button button-primary nav-cta" type="button" data-start-assessment>شروع بررسی</button>
-        <button class="menu-trigger" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
-      </div>
-    </div>
-
-    <nav class="mobile-menu" id="mobile-menu" aria-label="منوی موبایل" hidden>
-      <a href="#assessment">حل مشکل</a>
-      <a href="#education">آموزش</a>
-      <a href="#providers">پزشکان</a>
-      <a href="#courses">دوره‌ها</a>
-      <button type="button" data-unavailable="حساب کاربری پس از آماده‌شدن زیرساخت امن اطلاعات سلامت فعال می‌شود.">حساب من</button>
+    <div class="utility-bar"><div class="utility-inner"><span>ایتا&nbsp; / &nbsp;تلگرام&nbsp; / &nbsp;اینستاگرام</span><span>تهران <b>•</b> پاسخ‌گویی ۸–۲۱ <b>•</b> ۰۲۱-۸۸۸۸۴۳۲۱</span></div></div>
+    <nav class="main-nav" aria-label="ناوبری اصلی">
+      <a class="brand" href="#top" aria-label="مهریار"><span class="brand-mark">⌁</span><span><strong>مهریار</strong><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span></a>
+      <div class="nav-links"><a class="active" href="#atlas">اطلس ۳D بدن</a><a href="#clinics">کلینیک‌ها</a><a href="#learning">دوره‌ها</a><a href="#temperament">مزاج‌شناسی</a></div>
+      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><button class="login-button" type="button">ورود</button><a class="appointment-button" href="#start">رزرو نوبت مطب <span>←</span></a></div>
+      <button class="menu-button" type="button" aria-label="باز کردن منو">☰</button>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <p class="section-label"><span aria-hidden="true"></span> راهنمای سلامت فارسی</p>
-        <h1 id="hero-title">برای چیزی که اذیتتان می‌کند،<br />از یک جای روشن شروع کنید.</h1>
-        <p class="hero-summary">نشانه‌تان را بنویسید یا ناحیه‌ای از بدن را انتخاب کنید. مهریار با چند پرسش کوتاه، مسیر آموزشی و قدم بعدی را شفاف‌تر می‌کند؛ بدون نیاز به ساخت حساب.</p>
-        <div class="hero-actions">
-          <button class="button button-primary" type="button" data-start-assessment>شروع بررسی مشکل <span aria-hidden="true">←</span></button>
-          <a class="button button-secondary" href="#providers">پیدا کردن پزشک</a>
-        </div>
-        <p class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 3 8.9 7 10 4-1.1 7-5.3 7-10V6l-7-3Z"/><path d="m9.4 12 1.7 1.7 3.7-4"/></svg> در این نسخه، اطلاعات شما ذخیره یا ارسال نمی‌شود.</p>
-      </div>
+  <main>
+    <section class="page-intro" id="atlas"><p>مهریار / اطلس بالینی و آموزشی</p><h1>بدن‌تان را بهتر بشناسید.</h1><span>از شناخت عضو تا انتخاب پزشک مناسب، یک مسیر روشن و قابل‌اعتماد پیش روی شماست.</span></section>
 
-      <div class="body-explorer" aria-labelledby="body-explorer-title">
-        <div class="explorer-heading">
-          <div><p class="eyebrow">اطلس سلامت مهریار</p><h2 id="body-explorer-title">ناحیه‌ای را که با آن درگیر هستید انتخاب کنید.</h2></div>
-          <div class="explorer-controls">
-            <div class="gender-toggle" role="group" aria-label="انتخاب مدل اطلس">
-              <button type="button" class="gender-button active" data-gender="male" aria-pressed="true">آقا</button>
-              <button type="button" class="gender-button" data-gender="female" aria-pressed="false">خانم</button>
-            </div>
-            <span class="explorer-status"><i></i> انتخاب ناحیه</span>
-          </div>
-        </div>
-        <div class="body-map-area">
-          <div class="map-glow" aria-hidden="true"></div>
-          <div class="map-halo halo-one" aria-hidden="true"></div><div class="map-halo halo-two" aria-hidden="true"></div>
-          <svg class="body-map" viewBox="0 0 280 430" role="img" aria-label="اطلس شماتیک بدن انسان؛ برای دیدن توضیح هر ناحیه روی نقطه‌های روی بدن ضربه بزنید.">
-            <defs>
-              <linearGradient id="bodyFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F3EEE1"/><stop offset="1" stop-color="#DBE4D6"/></linearGradient>
-              <radialGradient id="chestGlow" cx="50%" cy="45%" r="55%"><stop stop-color="#52B788" stop-opacity=".38"/><stop offset="1" stop-color="#52B788" stop-opacity="0"/></radialGradient>
-            </defs>
-            <circle class="body-glow-chest" cx="140" cy="150" r="72" fill="url(#chestGlow)"/>
-            <circle cx="140" cy="55" r="35" fill="url(#bodyFill)"/>
-            <path d="M115 93c-9 11-14 28-15 53l-10 93c-2 20 12 36 32 36h36c20 0 34-16 32-36l-10-93c-1-25-6-42-15-53H115Z" fill="url(#bodyFill)"/>
-            <path d="M104 113c-24 11-34 43-36 84l-3 53c-1 16 8 27 21 28 11 1 20-7 21-20l5-65 10-40" fill="url(#bodyFill)"/>
-            <path d="M176 113c24 11 34 43 36 84l3 53c1 16-8 27-21 28-11 1-20-7-21-20l-5-65-10-40" fill="url(#bodyFill)"/>
-            <path d="M111 269 98 390c-2 17 8 29 22 30 14 1 23-9 24-25l5-94h-38Z" fill="url(#bodyFill)"/>
-            <path d="m169 269 13 121c2 17-8 29-22 30-14 1-23-9-24-25l-5-94h38Z" fill="url(#bodyFill)"/>
-            <circle class="body-joint q1" cx="96" cy="128" r="12" fill="url(#bodyFill)"/>
-            <circle class="body-joint q2" cx="184" cy="128" r="12" fill="url(#bodyFill)"/>
-            <path class="body-rim" d="M115 93c-9 11-14 28-15 53l-10 93c-2 20 12 36 32 36h36c20 0 34-16 32-36l-10-93c-1-25-6-42-15-53H115Z" fill="none"/>
-          </svg>
-          <button type="button" class="hotspot hotspot-head" data-region="سر و گردن" aria-label="سر و گردن"><span class="hotspot-dot"></span><span class="hotspot-label">سر و گردن</span></button>
-          <button type="button" class="hotspot hotspot-chest" data-region="قفسه سینه و قلب" aria-label="قفسه سینه و قلب"><span class="hotspot-dot"></span><span class="hotspot-label">قفسه سینه</span></button>
-          <button type="button" class="hotspot hotspot-digestive" data-region="گوارش و کبد" aria-label="گوارش و کبد"><span class="hotspot-dot"></span><span class="hotspot-label">گوارش و کبد</span></button>
-          <button type="button" class="hotspot hotspot-spine" data-region="ستون فقرات" aria-label="ستون فقرات"><span class="hotspot-dot"></span><span class="hotspot-label">ستون فقرات</span></button>
-          <button type="button" class="hotspot hotspot-knee" data-region="زانو و اندام‌ها" aria-label="زانو و اندام‌ها"><span class="hotspot-dot"></span><span class="hotspot-label">زانو</span></button>
-        </div>
-        <div class="explorer-footer"><p>این انتخاب برای شروع پرسش‌های آموزشی است، نه تشخیص.</p><button class="inline-link" type="button" data-start-assessment>نشانه را بنویسم <span aria-hidden="true">←</span></button></div>
-      </div>
+    <section class="atlas-layout" aria-label="اطلس بدن">
+      <aside class="member-drawer" id="member-drawer">
+        <div class="drawer-top"><span class="drawer-icon">✦</span><div><p>عضو انتخاب‌شده</p><h2 id="drawer-title">معده و گوارش</h2></div></div>
+        <p class="drawer-lead" id="drawer-description">معده در فرایند دریافت و هضم اولیهٔ غذا نقش دارد. شناخت نشانه‌ها می‌تواند به انتخاب مسیر پیگیری مناسب کمک کند.</p>
+        <div class="drawer-section"><h3>نشانه‌های رایج</h3><div class="chips" id="symptom-chips"><button type="button">سوزش سر دل</button><button type="button">نفخ</button><button type="button">احساس سنگینی</button><button type="button">تهوع</button></div></div>
+        <div class="drawer-section"><h3>گام بعدی</h3><p>اگر نگرانی‌تان ادامه‌دار است، ابتدا آن را توضیح دهید تا مسیر آموزشی و پزشک مناسب را ببینید.</p></div>
+        <button class="drawer-cta" type="button">گفت‌وگو با راهنمای مهریار <span>←</span></button>
+        <p class="drawer-note">راهنمایی مهریار، جایگزین تشخیص یا تجویز پزشک نیست.</p>
+      </aside>
+
+      <section class="anatomy-stage" aria-label="نمای تعاملی آناتومی">
+        <img id="anatomy-image" src="../public/figma-assets/figma-Anatomical-human-visualization-1.png" alt="مدل آناتومی بدن انسان" />
+        <div class="stage-toolbar"><span>نمای روبه‌رو • بزرگ‌نمایی آماده</span><div class="sex-switch"><button class="active" type="button" data-sex="male">آقا</button><button type="button" data-sex="female">خانم</button></div></div>
+        <button class="hotspot hotspot-head" type="button" data-member="سر"><i></i><span>سر</span></button>
+        <button class="hotspot hotspot-chest" type="button" data-member="قفسه سینه"><i></i><span>قفسه سینه</span></button>
+        <button class="hotspot hotspot-stomach selected" type="button" data-member="معده"><i></i><span>معده</span></button>
+        <button class="hotspot hotspot-spine" type="button" data-member="ستون فقرات"><i></i><span>ستون فقرات</span></button>
+        <button class="hotspot hotspot-knee" type="button" data-member="زانوها"><i></i><span>زانوها</span></button>
+        <div class="zoom-tools"><button type="button" data-zoom="in" aria-label="بزرگ‌نمایی">+</button><button type="button" data-zoom="out" aria-label="کوچک‌نمایی">−</button></div>
+        <span class="stage-state" id="stage-state">معده انتخاب شده • ۱۰۰٪</span>
+      </section>
     </section>
 
-    <section class="search-panel" id="assessment" aria-labelledby="search-title">
-      <div><p class="eyebrow">شروع با نشانه</p><h2 id="search-title">چه چیزی باعث نگرانی شما شده است؟</h2></div>
-      <form class="symptom-search" id="symptom-search">
-        <label class="sr-only" for="symptom-input">مشکل یا نشانه خود را بنویسید</label>
-        <input id="symptom-input" name="symptom" type="text" autocomplete="off" placeholder="مشکل یا علامت خود را بنویسید..." />
-        <button class="button button-primary" type="submit">شروع <span aria-hidden="true">←</span></button>
-      </form>
-      <div class="quick-symptoms" aria-label="نشانه‌های رایج برای شروع">
-        <span>نمونه‌های رایج:</span>
-        <button type="button" data-symptom="خستگی">خستگی</button><button type="button" data-symptom="نفخ">نفخ</button><button type="button" data-symptom="سردرد">سردرد</button><button type="button" data-symptom="بی‌خوابی">بی‌خوابی</button>
-      </div>
+    <section class="feature-row" id="learning">
+      <article><span class="feature-icon">▣</span><h2>آموزش از منابع معتبر</h2><p>دوره‌های عمومی طب ایرانی با مدرس متخصص و مرزبندی روشن با درمان و تجویز.</p><a href="#learning">مشاهده دوره‌ها <b>←</b></a></article>
+      <article id="clinics"><span class="feature-icon">✚</span><h2>دسترسی به پزشک مناسب</h2><p>مقایسه پزشکان، آدرس کلینیک‌ها و انتخاب نوبت حضوری با زمان‌های در دسترس.</p><a href="#clinics">یافتن کلینیک <b>←</b></a></article>
+      <article id="temperament"><span class="feature-icon">⌁</span><h2>شناخت، نه خودتشخیصی</h2><p>اطلاعات ساده و دقیق درباره اعضای بدن و نشانه‌هایی که نیازمند پیگیری‌اند.</p><a href="#start">بیشتر بدانید <b>←</b></a></article>
     </section>
 
-    <section class="how-it-works section" aria-labelledby="how-title">
-      <div class="section-heading"><p class="section-label"><span aria-hidden="true"></span> مسیر مهریار</p><h2 id="how-title">چند پرسش کوتاه، برای این‌که بدانید قدم بعدی چیست.</h2><p>مهریار اطلاعات شما را برای راهنمایی آموزشی مرتب می‌کند و محدودیت‌های خودش را هم روشن می‌گوید.</p></div>
-      <ol class="process-list">
-        <li><span>۱</span><div><h3>نشانه یا ناحیه را انتخاب کنید</h3><p>با متن کوتاه یا انتخاب از نقشه بدن شروع می‌کنید.</p></div></li>
-        <li><span>۲</span><div><h3>فقط پرسش‌های لازم را پاسخ دهید</h3><p>مدت و شدت، برای شناخت بهتر زمینه نشانه پرسیده می‌شوند.</p></div></li>
-        <li><span>۳</span><div><h3>راهنمای آموزشی و قدم بعدی را ببینید</h3><p>اگر مسیر به بررسی تخصصی نیاز داشته باشد، آن را واضح می‌گوییم.</p></div></li>
-      </ol>
-    </section>
+    <section class="start-panel" id="start"><div><p>از کجا شروع کنم؟</p><h2>نگرانی‌تان را به زبان خودتان توضیح دهید.</h2><span>عضو موردنظر را روی اطلس انتخاب کنید، یا نشانه‌ای را بنویسید تا راهنمای مهریار شما را به مسیر مناسب هدایت کند.</span></div><div class="start-actions"><button class="primary-action" type="button">شروع گفت‌وگو <b>←</b></button><a class="secondary-action" href="#clinics">رزرو نوبت مطب</a></div></section>
 
-    <section class="trust-section" aria-labelledby="trust-title">
-      <div class="trust-intro"><p class="eyebrow">چیزی که مهریار انجام می‌دهد</p><h2 id="trust-title">راهنمایی را قابل فهم می‌کند؛ جای پزشک را نمی‌گیرد.</h2></div>
-      <div class="trust-points">
-        <article><span class="icon-wrap" aria-hidden="true">۱</span><h3>محدودیت روشن</h3><p>نتیجه، تشخیص یا درمان نیست؛ این را در همان مسیر به شما یادآوری می‌کنیم.</p></article>
-        <article><span class="icon-wrap" aria-hidden="true">۲</span><h3>داده حداقلی</h3><p>در نسخه فعلی، هیچ نشانه یا پاسخ واردشده‌ای ذخیره و ارسال نمی‌شود.</p></article>
-        <article><span class="icon-wrap" aria-hidden="true">۳</span><h3>مسیر پیگیری</h3><p>وقتی راهنمایی کافی نباشد، مسیر مراجعه تخصصی از محصول جدا نمی‌ماند.</p></article>
-      </div>
-    </section>
-
-    <section class="education-section section" id="education" aria-labelledby="education-title">
-      <div class="section-heading compact"><p class="section-label"><span aria-hidden="true"></span> آموزش</p><h2 id="education-title">محتوای سلامت، وقتی منتشر می‌شود که بتوان به آن رجوع کرد.</h2><p>مقاله‌ها و دوره‌های مهریار پیش از انتشار باید نویسنده، منبع، تاریخ به‌روزرسانی و بازبینی تخصصی داشته باشند.</p></div>
-      <div class="unavailable-state">
-        <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M18 18h44v44H18z"/><path d="M28 31h24M28 40h24M28 49h15"/><path d="m57 57 8 8"/></svg>
-        <div><h3>محتوای تأییدشده در حال آماده‌سازی است.</h3><p>به‌جای نمایش مقاله‌های ساختگی، این بخش پس از ورود منابع و بازبینی تخصصی فعال می‌شود.</p></div>
-        <button class="button button-secondary" type="button" data-unavailable="با انتشار اولین محتوای بازبینی‌شده، این بخش در دسترس خواهد بود.">اطلاع از انتشار</button>
-      </div>
-    </section>
-
-    <section class="providers-section" id="providers" aria-labelledby="providers-title">
-      <div class="providers-inner"><div class="section-heading compact"><p class="section-label"><span aria-hidden="true"></span> پزشکان</p><h2 id="providers-title">وقتی نیاز به متخصص دارید، انتخاب باید بر پایه اطلاعات معتبر باشد.</h2><p>فهرست پزشکان و رزرو، پس از تأیید مراکز همکار و اتصال داده‌های واقعی اضافه می‌شود.</p></div><div class="provider-empty"><span aria-hidden="true">+</span><h3>فهرست پزشکان هنوز در دسترس نیست.</h3><p>این بهتر از نمایش نام، تخصص یا زمان نوبت ساختگی است.</p><button class="inline-link" type="button" data-unavailable="داده معتبر پزشکان هنوز به مهریار متصل نشده است.">چرا هنوز در دسترس نیست؟ <span aria-hidden="true">←</span></button></div></div>
-    </section>
-
-    <section class="courses-section section" id="courses" aria-labelledby="courses-title"><div class="section-heading compact"><p class="section-label"><span aria-hidden="true"></span> دوره‌ها</p><h2 id="courses-title">یادگیری ساختاریافته، پس از آماده‌شدن محتوای واقعی.</h2><p>دوره‌ها، مدرس‌ها و قیمت‌ها تنها پس از تأیید داده واقعی در این بخش نمایش داده می‌شوند.</p></div></section>
-
-    <section class="brand-story section" aria-labelledby="brand-title"><p class="eyebrow">درباره مهریار</p><h2 id="brand-title">مهریار برای ساده‌تر کردن نقطه شروع ساخته می‌شود.</h2><p>از ثبت نشانه تا پیدا کردن آموزش و مسیر پیگیری، همه‌چیز باید روشن، انسانی و متناسب با زبان فارسی باشد.</p><small>محصولی از نفیس طب حکیم</small></section>
+    <section class="medical-boundary"><strong>راهنمایی، نه تشخیص یا تجویز <b>•</b> اورژانس ۱۱۵</strong><span>خدمات مشاوره‌ای این پلتفرم صرفاً جهت ناوبری بالینی و تسهیل انتخاب پزشک مناسب است. در موارد حاد، فوراً با اورژانس تماس بگیرید.</span></section>
   </main>
 
-  <footer class="site-footer" id="footer-contact"><div class="footer-brand"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4.5c7.2 0 13 5.8 13 13v4.1c0 8-5.4 14.8-13 17.4-7.6-2.6-13-9.4-13-17.4v-4.1c0-7.2 5.8-13 13-13Z"/><path d="M15 22h14M22 15v14"/></svg><span>مهریار <small>سلامت ایرانی</small></span></a><p>پایگاه جامع سلامت و آموزش طب ایرانی، با تمرکز بر شروعی روشن و مسئولانه.</p><form class="newsletter-form"><label for="newsletter">پیام سلامت و تدابیر فصلی</label><div><input id="newsletter" type="tel" placeholder="شماره همراه شما" /><button class="button button-primary" type="submit">عضویت</button></div></form></div><div class="footer-column"><h3>دسترسی سریع</h3><a href="#assessment">اطلس علائم بدن</a><a href="#providers">رزرو نوبت حضوری</a><a href="#courses">کاتالوگ دوره‌ها</a><a href="#education">پرسش‌های متداول</a></div><div class="footer-column"><h3>مراکز مهریار</h3><p>مرکز ونک<br />میدان ونک، خیابان ملاصدرا، پلاک ۲۴</p><p>مرکز نیاوران<br />خیابان باهنر، مجتمع سلامت ایرانیان</p><a href="tel:+982188884321">۰۲۱-۸۸۸۸۴۳۲۱</a></div><div class="footer-column"><h3>ارتباط با ما</h3><a href="mailto:support@mehryar.ir">support@mehryar.ir</a><a href="#footer-contact">ایتا: @mehryar_teb</a><a href="#footer-contact">تلگرام: @mehryar_health</a><a href="#footer-contact">اینستاگرام: @mehryar.ir</a></div><div class="trust-badges"><span>نماد اعتماد الکترونیکی</span><span>مجوز نظام پزشکی</span><span>پرداخت امن شاپرک</span></div><p class="medical-disclaimer"><strong>توجه پزشکی:</strong> خدمات مهریار صرفاً برای ناوبری و آموزش است و جایگزین تشخیص یا درمان نیست. در موارد حاد قلبی، سکته، تشنج یا تنگی نفس شدید، بلافاصله با اورژانس ۱۱۵ تماس بگیرید.</p></footer>
-
-  <nav class="bottom-nav" aria-label="ناوبری پایین موبایل"><a class="active" href="#top"><span aria-hidden="true">⌂</span>خانه</a><button type="button" data-start-assessment><span aria-hidden="true">＋</span>حل مشکل</button><a href="#education"><span aria-hidden="true">▤</span>آموزش</a><a href="#providers"><span aria-hidden="true">♧</span>پزشکان</a><button type="button" data-unavailable="حساب کاربری پس از آماده‌شدن زیرساخت امن اطلاعات سلامت فعال می‌شود."><span aria-hidden="true">◌</span>حساب من</button></nav>
-
-  <dialog class="assessment-dialog" id="assessment-dialog" aria-labelledby="assessment-dialog-title" aria-describedby="assessment-dialog-description"><div class="dialog-shell"><div class="dialog-header"><div><p class="dialog-kicker">شروع راهنمایی آموزشی</p><h2 id="assessment-dialog-title">چند پرسش کوتاه</h2></div><button class="icon-button close-dialog" type="button" aria-label="بستن راهنمایی">×</button></div><p id="assessment-dialog-description" class="sr-only">این مسیر فقط برای راهنمایی آموزشی است و جایگزین ارزیابی پزشک یا خدمات فوریت‌های پزشکی نیست.</p><div class="progress-track" aria-label="پیشرفت راهنمایی"><span class="progress-fill"></span></div><div id="assessment-content"></div></div></dialog>
-  <div class="toast" role="status" aria-live="polite"></div>
+  <footer class="site-footer"><div class="footer-grid"><section><h2>همراه شما در مسیر مراجعه</h2><p>پشتیبانی • همه‌روزه ۸ تا ۲۱</p><a href="tel:+982188884321">۰۲۱-۸۸۸۸۴۳۲۱</a><a href="#top">واتساپ ۰۹۱۲۳۴۵۶۷۸۹</a><a href="mailto:support@mehryar.ir">support@mehryar.ir</a></section><section><h2>کلینیک‌های مهریار</h2><p><b>تهران، ونک</b><br />میدان ونک، ابتدای خیابان ملاصدرا، پلاک ۲۴</p><p><b>تهران، نیاوران</b><br />خیابان باهنر، مجتمع سلامت ایرانیان</p><p><b>اصفهان</b><br />پل فردوسی، خیابان کمال اسماعیل</p></section><section><h2>مهریار</h2><p>مرکز خدمات بالینی و آموزشی طب ایرانی؛ پیوند دانش معتبر، آموزش مسئولانه و دسترسی روشن به پزشک.</p><div class="socials"><a href="#top">ایتا</a><a href="#top">تلگرام</a><a href="#top">اینستاگرام</a></div></section></div><div class="footer-bottom"><span>© ۱۴۰۵ مهریار. تمامی حقوق محفوظ است.</span><span>نماد اعتماد الکترونیکی &nbsp; • &nbsp; پرداخت امن شاپرک</span></div></footer>
   <script src="script.js" defer></script>
 </body>
 </html>
