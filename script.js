@@ -52,7 +52,40 @@ document.querySelector('[data-show-doctors]')?.addEventListener('click', (event)
   event.currentTarget.hidden = true;
 });
 
-document.querySelectorAll('[data-appointment], [data-course]').forEach((button) => button.addEventListener('click', () => {
-  button.textContent = 'به‌زودی فعال می‌شود';
+document.querySelectorAll('[data-appointment]').forEach((button) => button.addEventListener('click', () => {
+  window.location.href = 'clinics.html';
+}));
+
+document.querySelectorAll('[data-course]').forEach((button) => button.addEventListener('click', () => {
+  button.textContent = 'جزئیات دوره به‌زودی';
   button.disabled = true;
 }));
+
+const homeChatForm = document.getElementById('home-chat-form');
+const homeChatInput = document.getElementById('home-chat-input');
+const homeChatMessages = document.getElementById('home-chat-messages');
+
+function addHomeChatMessage(text, isUser) {
+  if (!homeChatMessages) return;
+  const message = document.createElement('article');
+  message.className = isUser ? 'home-user-message' : 'home-bot-message';
+  const content = document.createElement('div');
+  content.textContent = text;
+  message.append(content);
+  homeChatMessages.append(message);
+  homeChatMessages.scrollTop = homeChatMessages.scrollHeight;
+}
+
+function respondFromHomeChat(text) {
+  addHomeChatMessage(text, true);
+  homeChatInput.value = '';
+  window.setTimeout(() => addHomeChatMessage('برای شروع، می‌توانم شما را به پزشکان همکار، رزرو نوبت یا دوره‌های آموزشی مرتبط هدایت کنم. این گفت‌وگو تشخیص یا تجویز پزشکی نیست.', false), 220);
+}
+
+homeChatForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const text = homeChatInput.value.trim();
+  if (text) respondFromHomeChat(text);
+});
+
+document.querySelectorAll('[data-home-prompt]').forEach((button) => button.addEventListener('click', () => respondFromHomeChat(button.dataset.homePrompt)));

@@ -17,7 +17,7 @@
     <nav class="main-nav" aria-label="ناوبری اصلی">
       <a class="brand" href="#top" aria-label="مهریار"><span class="brand-mark">⌁</span><span><strong>مهریار</strong><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span></a>
       <div class="nav-links"><a class="active" href="#atlas">اطلس ۳D بدن</a><a href="#doctors">کلینیک‌ها</a><a href="#courses">دوره‌ها</a><a href="#temperament">مزاج‌شناسی</a></div>
-      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><button class="login-button" type="button">ورود</button><a class="appointment-button" href="#start">رزرو نوبت مطب <span>←</span></a></div>
+      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><button class="login-button" type="button">ورود</button><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
       <button class="menu-button" type="button" aria-label="باز کردن منو">☰</button>
     </nav>
   </header>
@@ -35,16 +35,12 @@
         <p class="drawer-note">راهنمایی مهریار، جایگزین تشخیص یا تجویز پزشک نیست.</p>
       </aside>
 
-      <section class="anatomy-stage" aria-label="نمای تعاملی آناتومی">
-        <img id="anatomy-image" src="public/figma-assets/figma-Anatomical-human-visualization-1.png" alt="مدل آناتومی بدن انسان" />
-        <div class="stage-toolbar"><span>نمای روبه‌رو • بزرگ‌نمایی آماده</span><div class="sex-switch"><button class="active" type="button" data-sex="male">آقا</button><button type="button" data-sex="female">خانم</button></div></div>
-        <button class="hotspot hotspot-head" type="button" data-member="سر"><i></i><span>سر</span></button>
-        <button class="hotspot hotspot-chest" type="button" data-member="قفسه سینه"><i></i><span>قفسه سینه</span></button>
-        <button class="hotspot hotspot-stomach selected" type="button" data-member="معده"><i></i><span>معده</span></button>
-        <button class="hotspot hotspot-spine" type="button" data-member="ستون فقرات"><i></i><span>ستون فقرات</span></button>
-        <button class="hotspot hotspot-knee" type="button" data-member="زانوها"><i></i><span>زانوها</span></button>
-        <div class="zoom-tools"><button type="button" data-zoom="in" aria-label="بزرگ‌نمایی">+</button><button type="button" data-zoom="out" aria-label="کوچک‌نمایی">−</button></div>
-        <span class="stage-state" id="stage-state">معده انتخاب شده • ۱۰۰٪</span>
+      <section class="home-chat-stage" aria-labelledby="home-chat-title">
+        <div class="home-chat-top"><div><p>دستیار مهریار</p><h2 id="home-chat-title">از نگرانی‌تان بگویید.</h2></div><span>● راهنمایی غیرتشخیصی</span></div>
+        <div class="home-chat-messages" id="home-chat-messages"><article class="home-bot-message"><span>⌁</span><div>سلام، من راهنمای مهریار هستم. می‌توانم برای پیدا کردن پزشک، نوبت حضوری، محتوای آموزشی یا مسیر مناسب کنارتان باشم.<small>همین حالا</small></div></article></div>
+        <div class="home-chat-prompts"><button type="button" data-home-prompt="یک نشانه را توضیح بدهم">یک نشانه را توضیح بدهم</button><button type="button" data-home-prompt="پزشک مناسب را پیدا کنم">پزشک مناسب را پیدا کنم</button><button type="button" data-home-prompt="در مورد نوبت سوال دارم">در مورد نوبت سوال دارم</button></div>
+        <form class="home-chat-form" id="home-chat-form"><label class="sr-only" for="home-chat-input">پیام شما</label><input id="home-chat-input" placeholder="نگرانی یا پرسش خود را بنویسید..." autocomplete="off" /><button type="submit" aria-label="ارسال پیام">↑</button></form>
+        <p class="home-chat-warning">در نشانه‌های شدید یا ناگهانی، مانند تنگی نفس، درد قفسه سینه یا بیهوشی، فوراً با اورژانس ۱۱۵ تماس بگیرید.</p>
       </section>
     </section>
 

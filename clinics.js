@@ -35,7 +35,10 @@ document.querySelectorAll('[data-book]').forEach((button) => button.addEventList
   button.closest('.clinic-card').querySelector('[data-slot]')?.click();
 }));
 
+const bookingStatus = document.getElementById('booking-status');
+
 continueButton.addEventListener('click', () => {
-  continueButton.textContent = 'رزرو در نسخهٔ بعدی فعال می‌شود';
-  continueButton.disabled = true;
+  const booking = { clinic: clinic.textContent, time: time.textContent };
+  localStorage.setItem('mehryar-booking', JSON.stringify(booking));
+  window.location.href = 'checkout.html';
 });
