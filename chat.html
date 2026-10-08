@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1b4332" />
+  <meta name="description" content="راهنمای ناوبری بالینی مهریار؛ برای انتخاب مسیر مراجعه مناسب." />
+  <title>راهنمای مهریار | ناوبری بالینی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <header class="chat-header"><a class="chat-brand" href="index.html"><span>⌁</span><strong>مهریار</strong></a><nav><a href="index.html">اطلس بدن</a><a class="active" href="chat.html">راهنمای مهریار</a><a href="index.html#doctors">کلینیک‌ها</a><a href="index.html#courses">دوره‌ها</a></nav><a class="header-action" href="index.html#start">رزرو نوبت مطب</a></header>
+  <main class="chat-page">
+    <aside class="history-panel"><div class="history-title"><div><p>فضای شخصی شما</p><h1>راهنمای مهریار</h1></div><button type="button" id="new-chat" aria-label="گفت‌وگوی تازه">＋</button></div><button class="history-item active" type="button"><span>امروز</span><strong>شروع گفت‌وگوی تازه</strong><small>هنوز موردی ثبت نشده</small></button><div class="history-empty"><span>◌</span><p>گفت‌وگوها تنها پس از ورود امن به حساب کاربری قابل نگهداری هستند.</p></div><div class="history-boundary"><strong>راهنمایی، نه درمان</strong><p>این گفتگو برای انتخاب مسیر و پاسخ به پرسش‌های پلتفرم است؛ تشخیص یا تجویز انجام نمی‌دهد.</p></div></aside>
+
+    <section class="conversation" aria-label="گفت‌وگو با راهنمای مهریار">
+      <div class="conversation-top"><div><p>راهنمای ناوبری بالینی</p><h2>از یک توضیح کوتاه شروع کنیم.</h2></div><span class="secure-label">● حریم خصوصی شما مهم است</span></div>
+      <div class="message-list" id="message-list" aria-live="polite">
+        <article class="assistant-message"><span class="bot-avatar">⌁</span><div><p>سلام، من راهنمای مهریار هستم.</p><p>می‌توانید نگرانی یا نشانه‌تان را با چند کلمه بنویسید. من فقط برای پیدا کردن مسیر مناسب، پرسش کوتاه می‌پرسم و درمان یا تشخیص ارائه نمی‌دهم.</p><time>همین حالا</time></div></article>
+      </div>
+      <div class="suggestions" aria-label="پیشنهادهای شروع"><button type="button" data-prompt="یک نشانه را توضیح بدهم">یک نشانه را توضیح بدهم</button><button type="button" data-prompt="پزشک مناسب را پیدا کنم">پزشک مناسب را پیدا کنم</button><button type="button" data-prompt="سوال درباره نوبت دارم">سوال درباره نوبت دارم</button><button type="button" data-prompt="دوره‌های آموزشی را ببینم">دوره‌های آموزشی را ببینم</button></div>
+      <form class="composer" id="chat-form"><label class="sr-only" for="chat-input">پیام شما</label><input id="chat-input" autocomplete="off" placeholder="نگرانی یا پرسش خود را بنویسید..." /><button type="submit" aria-label="ارسال پیام">↑</button></form><p class="composer-note">در نشانه‌های شدید یا ناگهانی، مانند تنگی نفس، درد قفسه سینه یا بیهوشی، فوراً با اورژانس ۱۱۵ تماس بگیرید.</p>
+    </section>
+
+    <aside class="recommendation-panel"><div class="recommendation-heading"><p>پس از گفت‌وگو</p><h2>مسیر پیشنهادی شما</h2></div><div class="recommendation-state" id="recommendation-state"><span>✦</span><h3>منتظر توضیح شما هستیم</h3><p>پس از چند پرسش کوتاه، مناسب‌ترین مسیر آموزشی یا مراجعه حضوری اینجا نمایش داده می‌شود.</p></div><div class="booking-card" id="booking-card" hidden><div class="booking-card-top"><img src="public/figma-assets/figma-Doctor-portrait-4.png" alt="پزشک همکار مهریار" /><div><span>پزشک همکار تأییدشده</span><h3>کلینیک مرکزی ونک</h3><p>تهران، میدان ونک</p></div></div><div class="slot-row"><span>زمان نزدیک</span><strong>امروز، ۱۶:۳۰</strong></div><a href="index.html#doctors">دیدن زمان‌های نوبت <b>←</b></a></div><div class="help-card"><span>?</span><div><strong>به دنبال چه چیزی هستید؟</strong><p>راهنمای مهریار می‌تواند شما را به اطلس، پزشک یا آموزش مرتبط هدایت کند.</p></div></div></aside>
+  </main>
+  <script src="chat.js" defer></script>
+</body>
+</html>
