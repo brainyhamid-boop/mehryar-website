@@ -36,7 +36,7 @@ form.addEventListener('submit', (event) => {
   document.getElementById('patient-national-id').setCustomValidity('');
   const appointment = { clinic: booking.clinic || 'کلینیک مهریار', time: booking.time || 'زمان انتخاب نشده', fullName: data.fullName.trim(), mobile, nationalId, birthDate: data.birthDate.trim(), note: data.note.trim(), gateway: selectedGateway, status: 'requested' };
   localStorage.setItem('mehryar-appointment', JSON.stringify(appointment));
-  localStorage.setItem('mehryar-profile', JSON.stringify({ fullName: appointment.fullName, mobile: appointment.mobile, nationalId: appointment.nationalId, birthDate: appointment.birthDate }));
+  localStorage.setItem('mehryar-profile', JSON.stringify({ ...profile, fullName: appointment.fullName, mobile: appointment.mobile, nationalId: appointment.nationalId, birthDate: appointment.birthDate }));
   document.getElementById('success-summary').textContent = `${appointment.fullName}، درخواست نوبت شما برای ${appointment.clinic} در ساعت ${appointment.time} ثبت شد. درگاه انتخابی: ${appointment.gateway}.`;
   document.getElementById('success').hidden = false;
 });

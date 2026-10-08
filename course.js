@@ -8,6 +8,7 @@ const courses = {
 const key = new URLSearchParams(window.location.search).get('course');
 const activeKey = courses[key] ? key : 'lifestyle';
 const course = courses[activeKey];
+const storedCourse = (() => { try { return JSON.parse(localStorage.getItem('mehryar-course') || '{}'); } catch { return {}; } })();
 document.title = `${course.title} | مهریار`;
 document.getElementById('course-artwork').src = `public/figma-assets/${course.image}`;
 document.getElementById('course-artwork').alt = `تصویر دوره ${course.title}`;
@@ -17,6 +18,12 @@ document.getElementById('course-description').textContent = course.description;
 document.getElementById('course-duration').textContent = course.duration;
 document.getElementById('enroll-price').textContent = course.price;
 document.getElementById('enroll-note').textContent = course.note;
+const enrollmentStatus = document.getElementById('enroll-status');
+const enrollButton = document.getElementById('enroll-button');
+if (storedCourse.status === 'enrolled' && storedCourse.key === activeKey) {
+  enrollmentStatus.textContent = 'این دوره در پنل شما فعال است.';
+  enrollButton.textContent = 'ادامهٔ دوره ←';
+}
 document.getElementById('lesson-list').replaceChildren(...course.lessons.map((lesson, index) => {
   const item = document.createElement('li');
   const link = document.createElement('a');
@@ -27,7 +34,12 @@ document.getElementById('lesson-list').replaceChildren(...course.lessons.map((le
 }));
 
 document.getElementById('enroll-button').addEventListener('click', () => {
-  localStorage.setItem('mehryar-course', JSON.stringify({ key: key && courses[key] ? key : 'lifestyle', title: course.title, status: 'enrolled' }));
+  if (storedCourse.status === 'enrolled' && storedCourse.key === activeKey) {
+    const profile = (() => { try { return JSON.parse(localStorage.getItem('mehryar-profile') || '{}'); } catch { return {}; } })();
+    window.location.href = profile.authenticated ? `lesson.html?course=${activeKey}&lesson=1` : 'profile.html';
+    return;
+  }
+  localStorage.setItem('mehryar-course', JSON.stringify({ key: activeKey, title: course.title, status: 'enrolled' }));
   const profile = (() => { try { return JSON.parse(localStorage.getItem('mehryar-profile') || '{}'); } catch { return {}; } })();
   window.location.href = profile.authenticated ? 'dashboard.html' : 'profile.html';
 });

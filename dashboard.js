@@ -1,8 +1,8 @@
 const courseDetails = {
-  lifestyle: { image: 'figma-Course-artwork-17.png', href: 'lesson.html?course=lifestyle&lesson=1' },
-  seasonal: { image: 'figma-Course-artwork-18.png', href: 'lesson.html?course=seasonal&lesson=1' },
-  temperament: { image: 'figma-Course-artwork-19.png', href: 'lesson.html?course=temperament&lesson=1' },
-  visit: { image: 'figma-Course-artwork-20.png', href: 'lesson.html?course=visit&lesson=1' }
+  lifestyle: { image: 'figma-Course-artwork-17.png', href: 'lesson.html?course=lifestyle&lesson=1', lessons: 4 },
+  seasonal: { image: 'figma-Course-artwork-18.png', href: 'lesson.html?course=seasonal&lesson=1', lessons: 3 },
+  temperament: { image: 'figma-Course-artwork-19.png', href: 'lesson.html?course=temperament&lesson=1', lessons: 6 },
+  visit: { image: 'figma-Course-artwork-20.png', href: 'lesson.html?course=visit&lesson=1', lessons: 2 }
 };
 
 function readStored(key) {
@@ -25,6 +25,8 @@ if (!profile.authenticated || !profile.fullName) {
     document.getElementById('learning-image').src = `public/figma-assets/${detail.image}`;
     document.getElementById('learning-image').alt = `تصویر دوره ${course.title}`;
     document.getElementById('learning-title').textContent = course.title;
+    const progress = (() => { try { return new Set(JSON.parse(localStorage.getItem(`mehryar-progress-${course.key}`) || '{}').completed || []); } catch { return new Set(); } })();
+    document.getElementById('learning-status').textContent = `${progress.size} از ${detail.lessons} جلسه تکمیل شده · ${Math.round((progress.size / detail.lessons) * 100)}٪ پیشرفت`;
     document.getElementById('learning-link').href = detail.href;
   }
 
