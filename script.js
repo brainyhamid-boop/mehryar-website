@@ -49,9 +49,9 @@ let showingAllDoctors = false;
 
 function applyHomeDoctorFilter(filter) {
   doctorCards.forEach((card, index) => {
-    const isIsfahan = card.querySelector('.doctor-content p').textContent.includes('اصفهان');
-    const inCity = filter === 'all' || filter === 'week' || (filter === 'isfahan' ? isIsfahan : !isIsfahan);
-    card.hidden = !inCity || (!showingAllDoctors && index > 4);
+    const matchesCity = filter === 'all' || filter === 'week' || card.dataset.city === filter;
+    const matchesAvailability = filter !== 'week' || card.dataset.availability.includes('week');
+    card.hidden = !matchesCity || !matchesAvailability || (!showingAllDoctors && index > 4);
   });
 }
 

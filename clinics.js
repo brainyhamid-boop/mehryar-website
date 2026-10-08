@@ -18,6 +18,12 @@ function hasAny(value, filters) {
   return filters.length === 0 || filters.some((filter) => value.split(' ').includes(filter));
 }
 
+function timeToMinutes(value) {
+  const digits = value.replace(/[۰-۹٠-٩]/g, (digit) => '0123456789'.charAt('۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩'.indexOf(digit) % 10));
+  const [hour, minute] = digits.split(':').map(Number);
+  return hour * 60 + minute;
+}
+
 function filterCards() {
   const days = selectedFilters('[data-day-filter]', 'dayFilter');
   const types = selectedFilters('[data-type-filter]', 'typeFilter');
@@ -48,7 +54,7 @@ document.getElementById('sort-results').addEventListener('click', (event) => {
   cards.sort((a, b) => {
     const first = a.querySelector('[data-slot]').dataset.slot;
     const second = b.querySelector('[data-slot]').dataset.slot;
-    return (first > second ? 1 : -1) * (descending ? -1 : 1);
+    return (timeToMinutes(first) - timeToMinutes(second)) * (descending ? -1 : 1);
   }).forEach((card) => grid.append(card));
   event.currentTarget.setAttribute('aria-pressed', String(!descending));
   event.currentTarget.textContent = descending ? 'نزدیک‌ترین زمان ↕' : 'دیرترین زمان ↕';

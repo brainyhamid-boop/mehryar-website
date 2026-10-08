@@ -10,10 +10,14 @@ function readStored(key) {
 }
 
 const profile = readStored('mehryar-profile');
+const enrolledCourse = readStored('mehryar-course');
 if (!profile.authenticated) window.location.replace('profile.html');
 
 const params = new URLSearchParams(window.location.search);
 const courseKey = courses[params.get('course')] ? params.get('course') : 'lifestyle';
+if (enrolledCourse.status !== 'enrolled' || enrolledCourse.key !== courseKey) {
+  window.location.replace(`course.html?course=${courseKey}`);
+}
 const course = courses[courseKey];
 const index = Math.max(0, Math.min(course.lessons.length - 1, Number(params.get('lesson')) - 1 || 0));
 const progressKey = `mehryar-progress-${courseKey}`;
@@ -53,7 +57,7 @@ function render() {
   previous.href = lessonUrl(index - 1);
   const next = document.getElementById('next-lesson');
   next.href = index < course.lessons.length - 1 ? lessonUrl(index + 1) : 'dashboard.html';
-  next.innerHTML = index < course.lessons.length - 1 ? 'جلسهٔ بعد <b>←</b>' : 'بازگشت به پنل <b>←</b>';
+  next.replaceChildren(index < course.lessons.length - 1 ? 'جلسهٔ بعد ' : 'بازگشت به پنل ', Object.assign(document.createElement('b'), { textContent: '←' }));
   document.getElementById('complete-lesson').textContent = progress.has(index) ? '✓ جلسه تکمیل شده' : '✓ پایان جلسه';
 }
 
