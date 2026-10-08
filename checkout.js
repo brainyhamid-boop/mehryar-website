@@ -15,6 +15,13 @@ const bookingTime = document.getElementById('booking-time');
 
 if (booking.clinic) clinicName.textContent = booking.clinic;
 if (booking.time) bookingTime.textContent = booking.time;
+if (!booking.clinic || !booking.time) {
+  const notice = document.createElement('p');
+  notice.className = 'form-note';
+  notice.textContent = 'ابتدا یک پزشک و زمان را از بخش کلینیک‌ها انتخاب کنید.';
+  form.prepend(notice);
+  form.querySelector('[type="submit"]').disabled = true;
+}
 ['fullName', 'mobile', 'nationalId', 'birthDate'].forEach((name) => {
   if (profile[name]) form.elements[name].value = profile[name];
 });
