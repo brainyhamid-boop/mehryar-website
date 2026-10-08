@@ -20,7 +20,7 @@ function respond(text) {
   addMessage(text, 'user');
   input.value = '';
   window.setTimeout(() => {
-    addMessage('برای انتخاب مسیر مناسب، می‌توانم شما را به پزشک همکار، اطلس بدن یا دورهٔ آموزشی مرتبط هدایت کنم. این گفتگو تشخیص یا تجویز پزشکی ارائه نمی‌دهد.', 'assistant');
+    addMessage('برای انتخاب مسیر مناسب، می‌توانم شما را به پزشک همکار، راهنمای مهریار یا دورهٔ آموزشی مرتبط هدایت کنم. این گفتگو تشخیص یا تجویز پزشکی ارائه نمی‌دهد.', 'assistant');
     recommendation.hidden = true;
     booking.hidden = false;
   }, 280);

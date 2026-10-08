@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#1b4332" /><title>ورود و پروفایل | مهریار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header><a class="brand" href="index.html">⌁ <strong>مهریار</strong></a><nav><a href="index.html">خانه</a><a href="chat.html">راهنمای مهریار</a><a href="clinics.html">کلینیک‌ها</a><a href="courses.html">دوره‌ها</a></nav><a class="booking-link" href="clinics.html">رزرو نوبت</a></header>
+  <main>
+    <section class="heading"><p>مهریار / حساب کاربری</p><h1>ورود و اطلاعات شما</h1><span>برای تکمیل سریع‌تر رزرو، مشخصات پایه را در همین مرورگر ذخیره کنید.</span></section>
+    <section class="profile-grid">
+      <form class="profile-card" id="profile-form"><h2>اطلاعات کاربر</h2><p>اطلاعات فقط در مرورگر شما ذخیره می‌شود و ورود واقعی در این نسخه فعال نیست.</p><label>نام و نام خانوادگی<input id="full-name" name="fullName" required autocomplete="name" placeholder="نام کامل" /></label><label>شماره همراه<input id="mobile" name="mobile" required type="tel" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷" /></label><label>کد ملی<input id="national-id" name="nationalId" inputmode="numeric" placeholder="۱۰ رقم کد ملی" /></label><label>تاریخ تولد<input id="birth-date" name="birthDate" placeholder="مثلاً ۱۳۷۰/۰۴/۲۱" /></label><button type="submit">ذخیره اطلاعات <b>←</b></button><p class="status" id="profile-status" role="status"></p></form>
+      <aside class="appointment-card"><p>وضعیت نوبت</p><h2 id="appointment-title">هنوز نوبتی ثبت نشده</h2><div id="appointment-details"><span>برای انتخاب پزشک و زمان، از بخش کلینیک‌ها شروع کنید.</span></div><a href="clinics.html">رفتن به کلینیک‌ها <b>←</b></a></aside>
+    </section>
+  </main>
+  <script src="profile.js" defer></script>
+</body>
+</html>

@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#1b4332" />
-  <meta name="description" content="مهریار؛ اطلس بالینی و آموزشی طب ایرانی." />
-  <title>مهریار | اطلس بالینی و آموزشی</title>
+  <meta name="description" content="مهریار؛ راهنمای سلامت، آموزش و نوبت‌دهی طب ایرانی." />
+  <title>مهریار | راهنمای سلامت و آموزش</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,16 +16,16 @@
     <div class="utility-bar"><div class="utility-inner"><span>ایتا&nbsp; / &nbsp;تلگرام&nbsp; / &nbsp;اینستاگرام</span><span>تهران <b>•</b> پاسخ‌گویی ۸–۲۱ <b>•</b> ۰۲۱-۸۸۸۸۴۳۲۱</span></div></div>
     <nav class="main-nav" aria-label="ناوبری اصلی">
       <a class="brand" href="#top" aria-label="مهریار"><span class="brand-mark">⌁</span><span><strong>مهریار</strong><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span></a>
-      <div class="nav-links"><a class="active" href="#atlas">اطلس ۳D بدن</a><a href="#doctors">کلینیک‌ها</a><a href="#courses">دوره‌ها</a><a href="#temperament">مزاج‌شناسی</a></div>
-      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><button class="login-button" type="button">ورود</button><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
+      <div class="nav-links"><a class="active" href="#mehryar-guide">راهنمای مهریار</a><a href="clinics.html">کلینیک‌ها</a><a href="courses.html">دوره‌ها</a><a href="#temperament">سبک زندگی</a></div>
+      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><a class="profile-link" href="profile.html">ورود / پروفایل</a><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
       <button class="menu-button" type="button" aria-label="باز کردن منو">☰</button>
     </nav>
   </header>
 
   <main>
-    <section class="page-intro" id="atlas"><p>مهریار / اطلس بالینی و آموزشی</p><h1>بدن‌تان را بهتر بشناسید.</h1><span>از شناخت عضو تا انتخاب پزشک مناسب، یک مسیر روشن و قابل‌اعتماد پیش روی شماست.</span></section>
+    <section class="page-intro" id="mehryar-guide"><p>مهریار / راهنمای سلامت و آموزش</p><h1>بدن‌تان را بهتر بشناسید.</h1><span>از شناخت عضو تا انتخاب پزشک مناسب، یک مسیر روشن و قابل‌اعتماد پیش روی شماست.</span></section>
 
-    <section class="atlas-layout" aria-label="اطلس بدن">
+    <section class="atlas-layout" aria-label="راهنمای مهریار">
       <aside class="member-drawer" id="member-drawer">
         <div class="drawer-top"><span class="drawer-icon">✦</span><div><p>عضو انتخاب‌شده</p><h2 id="drawer-title">معده و گوارش</h2></div></div>
         <p class="drawer-lead" id="drawer-description">معده در فرایند دریافت و هضم اولیهٔ غذا نقش دارد. شناخت نشانه‌ها می‌تواند به انتخاب مسیر پیگیری مناسب کمک کند.</p>
@@ -35,19 +35,23 @@
         <p class="drawer-note">راهنمایی مهریار، جایگزین تشخیص یا تجویز پزشک نیست.</p>
       </aside>
 
-      <section class="home-chat-stage" aria-labelledby="home-chat-title">
-        <div class="home-chat-top"><div><p>دستیار مهریار</p><h2 id="home-chat-title">از نگرانی‌تان بگویید.</h2></div><span>● راهنمایی غیرتشخیصی</span></div>
-        <div class="home-chat-messages" id="home-chat-messages"><article class="home-bot-message"><span>⌁</span><div>سلام، من راهنمای مهریار هستم. می‌توانم برای پیدا کردن پزشک، نوبت حضوری، محتوای آموزشی یا مسیر مناسب کنارتان باشم.<small>همین حالا</small></div></article></div>
-        <div class="home-chat-prompts"><button type="button" data-home-prompt="یک نشانه را توضیح بدهم">یک نشانه را توضیح بدهم</button><button type="button" data-home-prompt="پزشک مناسب را پیدا کنم">پزشک مناسب را پیدا کنم</button><button type="button" data-home-prompt="در مورد نوبت سوال دارم">در مورد نوبت سوال دارم</button></div>
-        <form class="home-chat-form" id="home-chat-form"><label class="sr-only" for="home-chat-input">پیام شما</label><input id="home-chat-input" placeholder="نگرانی یا پرسش خود را بنویسید..." autocomplete="off" /><button type="submit" aria-label="ارسال پیام">↑</button></form>
-        <p class="home-chat-warning">در نشانه‌های شدید یا ناگهانی، مانند تنگی نفس، درد قفسه سینه یا بیهوشی، فوراً با اورژانس ۱۱۵ تماس بگیرید.</p>
+      <section class="anatomy-stage" aria-label="نمای تعاملی بدن">
+        <img id="anatomy-image" src="public/media/mehryar-clinical-anatomy.jpg" alt="نمای بالینی بدن انسان" />
+        <div class="stage-toolbar"><span>نمای روبه‌رو • بزرگ‌نمایی آماده</span><div class="sex-switch"><button class="active" type="button">مرد</button><button type="button">زن</button></div></div>
+        <button class="hotspot hotspot-head" type="button" data-member="سر"><i></i><span>سر</span></button>
+        <button class="hotspot hotspot-chest" type="button" data-member="قفسه سینه"><i></i><span>قفسه سینه</span></button>
+        <button class="hotspot hotspot-stomach selected" type="button" data-member="معده"><i></i><span>معده</span></button>
+        <button class="hotspot hotspot-spine" type="button" data-member="ستون فقرات"><i></i><span>ستون فقرات</span></button>
+        <button class="hotspot hotspot-knee" type="button" data-member="زانوها"><i></i><span>زانوها</span></button>
+        <div class="zoom-tools"><button type="button" data-zoom="in" aria-label="بزرگ‌نمایی">+</button><button type="button" data-zoom="out" aria-label="کوچک‌نمایی">−</button></div>
+        <span class="stage-state" id="stage-state">معده انتخاب شده • ۱۰۰٪</span>
       </section>
     </section>
 
     <section class="feature-row" id="learning">
-      <article><span class="feature-icon">▣</span><h2>آموزش از منابع معتبر</h2><p>دوره‌های عمومی طب ایرانی با مدرس متخصص و مرزبندی روشن با درمان و تجویز.</p><a href="#learning">مشاهده دوره‌ها <b>←</b></a></article>
-      <article id="clinics"><span class="feature-icon">✚</span><h2>دسترسی به پزشک مناسب</h2><p>مقایسه پزشکان، آدرس کلینیک‌ها و انتخاب نوبت حضوری با زمان‌های در دسترس.</p><a href="#clinics">یافتن کلینیک <b>←</b></a></article>
-      <article id="temperament"><span class="feature-icon">⌁</span><h2>شناخت، نه خودتشخیصی</h2><p>اطلاعات ساده و دقیق درباره اعضای بدن و نشانه‌هایی که نیازمند پیگیری‌اند.</p><a href="#start">بیشتر بدانید <b>←</b></a></article>
+      <article><span class="feature-icon">▣</span><h2>آموزش از منابع معتبر</h2><p>دوره‌های عمومی طب ایرانی با مدرس متخصص و مرزبندی روشن با درمان و تجویز.</p><a href="courses.html">مشاهده دوره‌ها <b>←</b></a></article>
+      <article id="clinics"><span class="feature-icon">✚</span><h2>دسترسی به پزشک مناسب</h2><p>مقایسه پزشکان، آدرس کلینیک‌ها و انتخاب نوبت حضوری با زمان‌های در دسترس.</p><a href="clinics.html">یافتن کلینیک <b>←</b></a></article>
+      <article id="temperament"><span class="feature-icon">⌁</span><h2>شناخت، نه خودتشخیصی</h2><p>اطلاعات ساده و دقیق درباره اعضای بدن و نشانه‌هایی که نیازمند پیگیری‌اند.</p><a href="chat.html">شروع گفت‌وگو <b>←</b></a></article>
     </section>
 
     <section class="visual-section doctor-showcase" id="doctors" aria-labelledby="clinics-title">
@@ -69,7 +73,7 @@
     </section>
 
     <section class="visual-section courses-showcase" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading"><div><p>آکادمی مهریار</p><h2 id="courses-title">آموزش‌هایی برای سبک زندگی آگاهانه</h2><span>دوره‌های ویدیویی با ساختار روشن، زمان مشخص و مدرس متخصص.</span></div><a class="section-link" href="#courses">کاتالوگ کامل دوره‌ها <b>←</b></a></div>
+      <div class="section-heading"><div><p>آکادمی مهریار</p><h2 id="courses-title">آموزش‌هایی برای سبک زندگی آگاهانه</h2><span>دوره‌های ویدیویی با ساختار روشن، زمان مشخص و مدرس متخصص.</span></div><a class="section-link" href="courses.html">کاتالوگ کامل دوره‌ها <b>←</b></a></div>
       <div class="course-grid">
         <article class="course-card"><img src="public/figma-assets/figma-Course-artwork-17.png" alt="تصویر دوره مقدمات سبک زندگی سالم" /><div><div class="course-meta"><span>دوره عمومی</span><small>۴ جلسه • ۱۲۰ دقیقه</small></div><h3>مقدمات سبک زندگی سالم</h3><p>آموزش کاربردی با مدرس متخصص، برای ساختن عادت‌های روزمره آگاهانه.</p><div class="course-footer"><strong>رایگان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
         <article class="course-card"><img src="public/figma-assets/figma-Course-artwork-18.png" alt="تصویر دوره تدابیر فصلی در طب ایرانی" /><div><div class="course-meta"><span>یادگیری ویدیویی</span><small>۳ جلسه • ۷۵ دقیقه</small></div><h3>تدابیر فصلی در طب ایرانی</h3><p>نگاهی روشن به مراقبت روزمره و نقش تغییر فصل در سبک زندگی.</p><div class="course-footer"><strong>۱۶۹ هزار تومان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
@@ -78,7 +82,7 @@
       </div>
     </section>
 
-    <section class="start-panel" id="start"><div><p>از کجا شروع کنم؟</p><h2>نگرانی‌تان را به زبان خودتان توضیح دهید.</h2><span>عضو موردنظر را روی اطلس انتخاب کنید، یا نشانه‌ای را بنویسید تا راهنمای مهریار شما را به مسیر مناسب هدایت کند.</span></div><div class="start-actions"><a class="primary-action" href="chat.html">شروع گفت‌وگو <b>←</b></a><a class="secondary-action" href="#doctors">رزرو نوبت مطب</a></div></section>
+    <section class="start-panel" id="start"><div><p>از کجا شروع کنم؟</p><h2>نگرانی‌تان را به زبان خودتان توضیح دهید.</h2><span>عضو موردنظر را مشخص کنید، یا نشانه‌ای را بنویسید تا راهنمای مهریار شما را به مسیر مناسب هدایت کند.</span></div><div class="start-actions"><a class="primary-action" href="chat.html">شروع گفت‌وگو <b>←</b></a><a class="secondary-action" href="#doctors">رزرو نوبت مطب</a></div></section>
 
     <section class="medical-boundary"><strong>راهنمایی، نه تشخیص یا تجویز <b>•</b> اورژانس ۱۱۵</strong><span>خدمات مشاوره‌ای این پلتفرم صرفاً جهت ناوبری بالینی و تسهیل انتخاب پزشک مناسب است. در موارد حاد، فوراً با اورژانس تماس بگیرید.</span></section>
   </main>

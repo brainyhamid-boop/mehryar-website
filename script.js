@@ -57,8 +57,7 @@ document.querySelectorAll('[data-appointment]').forEach((button) => button.addEv
 }));
 
 document.querySelectorAll('[data-course]').forEach((button) => button.addEventListener('click', () => {
-  button.textContent = 'جزئیات دوره به‌زودی';
-  button.disabled = true;
+  window.location.href = 'courses.html';
 }));
 
 const homeChatForm = document.getElementById('home-chat-form');
