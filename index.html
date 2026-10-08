@@ -17,8 +17,8 @@
     <nav class="main-nav" aria-label="ناوبری اصلی">
       <a class="brand" href="#top" aria-label="مهریار"><span class="brand-mark">⌁</span><span><strong>مهریار</strong><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span></a>
       <div class="nav-links"><a class="active" href="#mehryar-guide">راهنمای مهریار</a><a href="clinics.html">کلینیک‌ها</a><a href="courses.html">دوره‌ها</a><a href="#temperament">سبک زندگی</a></div>
-      <div class="nav-actions"><button class="search-button" type="button" aria-label="جستجو">⌕ <span>جستجو</span></button><a class="profile-link" href="profile.html">ورود / پروفایل</a><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
-      <button class="menu-button" type="button" aria-label="باز کردن منو">☰</button>
+      <div class="nav-actions"><form class="search-form" id="site-search-form" role="search"><label class="sr-only" for="site-search-input">جست‌وجو در مهریار</label><input id="site-search-input" name="q" autocomplete="off" placeholder="جست‌وجو" /><button type="submit" aria-label="جستجو">⌕</button></form><a class="profile-link" href="profile.html">ورود / پروفایل</a><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
+      <button class="menu-button" type="button" aria-label="باز کردن منو" aria-expanded="false">☰</button>
     </nav>
   </header>
 
@@ -56,7 +56,7 @@
 
     <section class="visual-section doctor-showcase" id="doctors" aria-labelledby="clinics-title">
       <div class="section-heading"><div><p>کلینیک‌های مهریار</p><h2 id="clinics-title">پزشک مناسب، نزدیک‌تر از همیشه</h2><span>پزشکان همکار، بر اساس شهر، زمان پذیرش و مسیر پیگیری شما.</span></div><button class="outline-action" type="button" data-filter-toggle>فیلتر پزشکان <b>⌄</b></button></div>
-      <div class="doctor-filters" hidden><button class="filter-chip active" type="button">همه مراکز</button><button class="filter-chip" type="button">تهران</button><button class="filter-chip" type="button">اصفهان</button><button class="filter-chip" type="button">پذیرش این هفته</button></div>
+      <div class="doctor-filters" hidden><button class="filter-chip active" type="button" data-home-filter="all">همه مراکز</button><button class="filter-chip" type="button" data-home-filter="tehran">تهران</button><button class="filter-chip" type="button" data-home-filter="isfahan">اصفهان</button><button class="filter-chip" type="button" data-home-filter="week">پذیرش این هفته</button></div>
       <div class="doctor-grid">
         <article class="doctor-card"><img src="public/figma-assets/figma-Doctor-portrait-4.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک مرکزی ونک</p><small>امروز • ۱۶:۳۰ تا ۲۰:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
         <article class="doctor-card"><img src="public/figma-assets/figma-Doctor-portrait-5.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک نیاوران</p><small>فردا • ۰۹:۳۰ تا ۱۳:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>

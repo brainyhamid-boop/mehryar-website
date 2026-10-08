@@ -13,16 +13,23 @@ const stageState = document.getElementById('stage-state');
 const anatomyImage = document.getElementById('anatomy-image');
 let zoom = 1;
 
-document.querySelectorAll('.hotspot').forEach((hotspot) => {
-  hotspot.addEventListener('click', () => {
-    const data = memberContent[hotspot.dataset.member];
-    document.querySelectorAll('.hotspot').forEach((item) => item.classList.toggle('selected', item === hotspot));
-    title.textContent = data.title;
-    description.textContent = data.text;
-    chips.innerHTML = data.chips.map((chip) => `<button type="button">${chip}</button>`).join('');
-    stageState.textContent = `${hotspot.dataset.member} انتخاب شده • ${Math.round(zoom * 100)}٪`;
-  });
-});
+function renderChips(items) {
+  chips.replaceChildren(...items.map((item) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = item;
+    return button;
+  }));
+}
+
+document.querySelectorAll('.hotspot').forEach((hotspot) => hotspot.addEventListener('click', () => {
+  const data = memberContent[hotspot.dataset.member];
+  document.querySelectorAll('.hotspot').forEach((item) => item.classList.toggle('selected', item === hotspot));
+  title.textContent = data.title;
+  description.textContent = data.text;
+  renderChips(data.chips);
+  stageState.textContent = `${hotspot.dataset.member} انتخاب شده • ${Math.round(zoom * 100)}٪`;
+}));
 
 document.querySelectorAll('.sex-switch button').forEach((button) => button.addEventListener('click', () => {
   document.querySelectorAll('.sex-switch button').forEach((item) => item.classList.toggle('active', item === button));
@@ -37,54 +44,52 @@ document.querySelectorAll('[data-zoom]').forEach((button) => button.addEventList
 
 const filterToggle = document.querySelector('[data-filter-toggle]');
 const doctorFilters = document.querySelector('.doctor-filters');
-filterToggle?.addEventListener('click', () => {
+const doctorCards = [...document.querySelectorAll('.doctor-card')];
+let showingAllDoctors = false;
+
+function applyHomeDoctorFilter(filter) {
+  doctorCards.forEach((card, index) => {
+    const isIsfahan = card.querySelector('.doctor-content p').textContent.includes('اصفهان');
+    const inCity = filter === 'all' || filter === 'week' || (filter === 'isfahan' ? isIsfahan : !isIsfahan);
+    card.hidden = !inCity || (!showingAllDoctors && index > 4);
+  });
+}
+
+filterToggle.addEventListener('click', () => {
   const isHidden = doctorFilters.hidden;
   doctorFilters.hidden = !isHidden;
   filterToggle.querySelector('b').textContent = isHidden ? '⌃' : '⌄';
 });
 
-document.querySelectorAll('.filter-chip').forEach((filter) => filter.addEventListener('click', () => {
-  document.querySelectorAll('.filter-chip').forEach((item) => item.classList.toggle('active', item === filter));
+document.querySelectorAll('[data-home-filter]').forEach((filter) => filter.addEventListener('click', () => {
+  document.querySelectorAll('[data-home-filter]').forEach((item) => item.classList.toggle('active', item === filter));
+  showingAllDoctors = true;
+  applyHomeDoctorFilter(filter.dataset.homeFilter);
+  document.querySelector('[data-show-doctors]').hidden = true;
 }));
 
-document.querySelector('[data-show-doctors]')?.addEventListener('click', (event) => {
-  document.querySelectorAll('.extra-doctor').forEach((card) => { card.hidden = false; });
+document.querySelector('[data-show-doctors]').addEventListener('click', (event) => {
+  showingAllDoctors = true;
+  applyHomeDoctorFilter(document.querySelector('[data-home-filter].active').dataset.homeFilter);
   event.currentTarget.hidden = true;
 });
 
-document.querySelectorAll('[data-appointment]').forEach((button) => button.addEventListener('click', () => {
-  window.location.href = 'clinics.html';
-}));
+document.querySelectorAll('[data-appointment]').forEach((button) => button.addEventListener('click', () => { window.location.href = 'clinics.html'; }));
+document.querySelectorAll('[data-course]').forEach((button) => button.addEventListener('click', () => { window.location.href = 'courses.html'; }));
 
-document.querySelectorAll('[data-course]').forEach((button) => button.addEventListener('click', () => {
-  window.location.href = 'courses.html';
-}));
-
-const homeChatForm = document.getElementById('home-chat-form');
-const homeChatInput = document.getElementById('home-chat-input');
-const homeChatMessages = document.getElementById('home-chat-messages');
-
-function addHomeChatMessage(text, isUser) {
-  if (!homeChatMessages) return;
-  const message = document.createElement('article');
-  message.className = isUser ? 'home-user-message' : 'home-bot-message';
-  const content = document.createElement('div');
-  content.textContent = text;
-  message.append(content);
-  homeChatMessages.append(message);
-  homeChatMessages.scrollTop = homeChatMessages.scrollHeight;
-}
-
-function respondFromHomeChat(text) {
-  addHomeChatMessage(text, true);
-  homeChatInput.value = '';
-  window.setTimeout(() => addHomeChatMessage('برای شروع، می‌توانم شما را به پزشکان همکار، رزرو نوبت یا دوره‌های آموزشی مرتبط هدایت کنم. این گفت‌وگو تشخیص یا تجویز پزشکی نیست.', false), 220);
-}
-
-homeChatForm?.addEventListener('submit', (event) => {
+document.getElementById('site-search-form').addEventListener('submit', (event) => {
   event.preventDefault();
-  const text = homeChatInput.value.trim();
-  if (text) respondFromHomeChat(text);
+  const query = document.getElementById('site-search-input').value.trim().toLowerCase();
+  if (!query) return;
+  const destination = /دوره|آموزش|یادگیری/.test(query) ? 'courses.html' : /پزشک|کلینیک|نوبت|مطب/.test(query) ? 'clinics.html' : /بدن|عضو|معده|سر|قفسه|زانو|ستون/.test(query) ? '#mehryar-guide' : `chat.html?query=${encodeURIComponent(query)}`;
+  window.location.href = destination;
 });
 
-document.querySelectorAll('[data-home-prompt]').forEach((button) => button.addEventListener('click', () => respondFromHomeChat(button.dataset.homePrompt)));
+const menuButton = document.querySelector('.menu-button');
+const navigation = document.querySelector('.main-nav');
+menuButton.addEventListener('click', () => {
+  const open = navigation.classList.toggle('menu-open');
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'بستن منو' : 'باز کردن منو');
+  menuButton.textContent = open ? '×' : '☰';
+});
