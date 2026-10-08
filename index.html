@@ -27,24 +27,22 @@
 
     <section class="atlas-layout" aria-label="راهنمای مهریار">
       <aside class="member-drawer" id="member-drawer">
-        <div class="drawer-top"><span class="drawer-icon">✦</span><div><p>عضو انتخاب‌شده</p><h2 id="drawer-title">معده و گوارش</h2></div></div>
-        <p class="drawer-lead" id="drawer-description">معده در فرایند دریافت و هضم اولیهٔ غذا نقش دارد. شناخت نشانه‌ها می‌تواند به انتخاب مسیر پیگیری مناسب کمک کند.</p>
-        <div class="drawer-section"><h3>نشانه‌های رایج</h3><div class="chips" id="symptom-chips"><button type="button">سوزش سر دل</button><button type="button">نفخ</button><button type="button">احساس سنگینی</button><button type="button">تهوع</button></div></div>
-        <div class="drawer-section"><h3>گام بعدی</h3><p>اگر نگرانی‌تان ادامه‌دار است، ابتدا آن را توضیح دهید تا مسیر آموزشی و پزشک مناسب را ببینید.</p></div>
-        <a class="drawer-cta" href="chat.html">گفت‌وگو با راهنمای مهریار <span>←</span></a>
-        <p class="drawer-note">راهنمایی مهریار، جایگزین تشخیص یا تجویز پزشک نیست.</p>
+        <div class="drawer-top"><span class="drawer-icon">✦</span><div><p>گفت‌وگوی محرمانه و کوتاه</p><h2>راهنمای مهریار</h2></div></div>
+        <p class="drawer-lead">با چند جمله دربارهٔ نگرانی یا پرسش‌تان، مسیر مناسب برای آموزش، انتخاب پزشک یا نوبت حضوری را پیدا کنید.</p>
+        <div class="drawer-section"><h3>چه چیزی بنویسم؟</h3><div class="chips"><button type="button" data-home-prompt="موضوع نگرانی‌ام را توضیح می‌دهم">موضوع نگرانی</button><button type="button" data-home-prompt="برای مراجعه آماده می‌شوم">آمادگی برای مراجعه</button><button type="button" data-home-prompt="دورهٔ آموزشی مناسب می‌خواهم">دورهٔ آموزشی</button></div></div>
+        <div class="drawer-section"><h3>مرز روشن خدمات</h3><p>راهنمای مهریار تشخیص یا تجویز نمی‌کند؛ در نشانه‌های شدید یا ناگهانی، با اورژانس ۱۱۵ تماس بگیرید.</p></div>
+        <a class="drawer-cta" href="chat.html">باز کردن گفت‌وگوی کامل <span>←</span></a>
+        <p class="drawer-note">برای ادامهٔ گفت‌وگو و مشاهدهٔ پیشنهادها، صفحهٔ راهنمای مهریار را باز کنید.</p>
       </aside>
 
-      <section class="anatomy-stage" aria-label="نمای تعاملی بدن">
-        <img id="anatomy-image" src="public/figma-assets/figma-Anatomical-human-visualization-1.png" alt="نمای بالینی بدن انسان" />
-        <div class="stage-toolbar"><span>نمای روبه‌رو • بزرگ‌نمایی آماده</span><div class="sex-switch"><button class="active" type="button">مرد</button><button type="button">زن</button></div></div>
-        <button class="hotspot hotspot-head" type="button" data-member="سر"><i></i><span>سر</span></button>
-        <button class="hotspot hotspot-chest" type="button" data-member="قفسه سینه"><i></i><span>قفسه سینه</span></button>
-        <button class="hotspot hotspot-stomach selected" type="button" data-member="معده"><i></i><span>معده</span></button>
-        <button class="hotspot hotspot-spine" type="button" data-member="ستون فقرات"><i></i><span>ستون فقرات</span></button>
-        <button class="hotspot hotspot-knee" type="button" data-member="زانوها"><i></i><span>زانوها</span></button>
-        <div class="zoom-tools"><button type="button" data-zoom="in" aria-label="بزرگ‌نمایی">+</button><button type="button" data-zoom="out" aria-label="کوچک‌نمایی">−</button></div>
-        <span class="stage-state" id="stage-state">معده انتخاب شده • ۱۰۰٪</span>
+      <section class="home-chat-stage" aria-labelledby="home-chat-title">
+        <div class="home-chat-top"><div><p>راهنمای ناوبری بالینی</p><h2 id="home-chat-title">با راهنمای مهریار گفتگو کنید.</h2></div><span>حریم خصوصی شما مهم است</span></div>
+        <div class="home-chat-messages" id="home-chat-messages" aria-live="polite">
+          <article class="home-bot-message"><span>⌁</span><div>سلام، من راهنمای مهریار هستم. نگرانی یا پرسش‌تان را کوتاه بنویسید تا مسیر آموزشی یا مراجعهٔ مناسب را پیدا کنیم.<small>راهنمایی، نه تشخیص یا تجویز</small></div></article>
+        </div>
+        <div class="home-chat-prompts" aria-label="پیشنهادهای شروع"><button type="button" data-home-prompt="می‌خواهم یک نشانه را توضیح دهم">توضیح یک نشانه</button><button type="button" data-home-prompt="پزشک مناسب را پیدا کنم">یافتن پزشک</button><button type="button" data-home-prompt="درباره نوبت پرسش دارم">پرسش درباره نوبت</button></div>
+        <form class="home-chat-form" id="home-chat-form"><label class="sr-only" for="home-chat-input">پیام شما به راهنمای مهریار</label><input id="home-chat-input" autocomplete="off" placeholder="نگرانی یا پرسش خود را بنویسید..." /><button type="submit" aria-label="ارسال پیام">↑</button></form>
+        <p class="home-chat-warning">برای نشانه‌های شدید یا ناگهانی، مانند درد قفسه سینه یا تنگی نفس، با اورژانس ۱۱۵ تماس بگیرید.</p>
       </section>
     </section>
 

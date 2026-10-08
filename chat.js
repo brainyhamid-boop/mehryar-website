@@ -7,10 +7,20 @@ const booking = document.getElementById('booking-card');
 function addMessage(text, role) {
   const message = document.createElement('article');
   message.className = role === 'user' ? 'user-message' : 'assistant-message';
+  const bubble = document.createElement('div');
   if (role === 'user') {
-    message.innerHTML = `<div>${text}</div>`;
+    bubble.textContent = text;
+    message.append(bubble);
   } else {
-    message.innerHTML = `<span class="bot-avatar">⌁</span><div><p>${text}</p><time>همین حالا</time></div>`;
+    const avatar = document.createElement('span');
+    const paragraph = document.createElement('p');
+    const timestamp = document.createElement('time');
+    avatar.className = 'bot-avatar';
+    avatar.textContent = '⌁';
+    paragraph.textContent = text;
+    timestamp.textContent = 'همین حالا';
+    bubble.append(paragraph, timestamp);
+    message.append(avatar, bubble);
   }
   messages.append(message);
   messages.scrollTop = messages.scrollHeight;
