@@ -1,91 +1,629 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#1b4332" />
-  <meta name="description" content="مهریار؛ راهنمای سلامت، آموزش و نوبت‌دهی طب ایرانی." />
-  <title>مهریار | راهنمای سلامت و آموزش</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header" id="top">
-    <div class="utility-bar"><div class="utility-inner"><span>ایتا&nbsp; / &nbsp;تلگرام&nbsp; / &nbsp;اینستاگرام</span><span>تهران <b>•</b> پاسخ‌گویی ۸–۲۱ <b>•</b> ۰۲۱-۸۸۸۸۴۳۲۱</span></div></div>
-    <nav class="main-nav" aria-label="ناوبری اصلی">
-      <a class="brand" href="#top" aria-label="مهریار"><span class="brand-mark">⌁</span><span><strong>مهریار</strong><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span></a>
-      <div class="nav-links"><a class="active" href="#mehryar-guide">راهنمای مهریار</a><a href="clinics.html">کلینیک‌ها</a><a href="courses.html">دوره‌ها</a><a href="#temperament">سبک زندگی</a></div>
-      <div class="nav-actions"><form class="search-form" id="site-search-form" role="search"><label class="sr-only" for="site-search-input">جست‌وجو در مهریار</label><input id="site-search-input" name="q" autocomplete="off" placeholder="جست‌وجو" /><button type="submit" aria-label="جستجو">⌕</button></form><a class="profile-link" href="dashboard.html">ورود / پروفایل</a><a class="appointment-button" href="clinics.html">رزرو نوبت مطب <span>←</span></a></div>
-      <button class="menu-button" type="button" aria-label="باز کردن منو" aria-expanded="false">☰</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="page-intro" id="mehryar-guide"><p>مهریار / راهنمای سلامت و آموزش</p><h1>بدن‌تان را بهتر بشناسید.</h1><span>از شناخت عضو تا انتخاب پزشک مناسب، یک مسیر روشن و قابل‌اعتماد پیش روی شماست.</span></section>
-
-    <section class="atlas-layout" aria-label="راهنمای مهریار">
-      <aside class="member-drawer" id="member-drawer">
-        <div class="drawer-top"><span class="drawer-icon">✦</span><div><p>گفت‌وگوی محرمانه و کوتاه</p><h2>راهنمای مهریار</h2></div></div>
-        <p class="drawer-lead">با چند جمله دربارهٔ نگرانی یا پرسش‌تان، مسیر مناسب برای آموزش، انتخاب پزشک یا نوبت حضوری را پیدا کنید.</p>
-        <div class="drawer-section"><h3>چه چیزی بنویسم؟</h3><div class="chips"><button type="button" data-home-prompt="موضوع نگرانی‌ام را توضیح می‌دهم">موضوع نگرانی</button><button type="button" data-home-prompt="برای مراجعه آماده می‌شوم">آمادگی برای مراجعه</button><button type="button" data-home-prompt="دورهٔ آموزشی مناسب می‌خواهم">دورهٔ آموزشی</button></div></div>
-        <div class="drawer-section"><h3>مرز روشن خدمات</h3><p>راهنمای مهریار تشخیص یا تجویز نمی‌کند؛ در نشانه‌های شدید یا ناگهانی، با اورژانس ۱۱۵ تماس بگیرید.</p></div>
-        <a class="drawer-cta" href="chat.html">باز کردن گفت‌وگوی کامل <span>←</span></a>
-        <p class="drawer-note">برای ادامهٔ گفت‌وگو و مشاهدهٔ پیشنهادها، صفحهٔ راهنمای مهریار را باز کنید.</p>
-      </aside>
-
-      <section class="home-chat-stage" aria-labelledby="home-chat-title">
-        <div class="home-chat-top"><div><p>راهنمای ناوبری بالینی</p><h2 id="home-chat-title">با راهنمای مهریار گفتگو کنید.</h2></div><span>حریم خصوصی شما مهم است</span></div>
-        <div class="home-chat-messages" id="home-chat-messages" aria-live="polite">
-          <article class="home-bot-message"><span>⌁</span><div>سلام، من راهنمای مهریار هستم. نگرانی یا پرسش‌تان را کوتاه بنویسید تا مسیر آموزشی یا مراجعهٔ مناسب را پیدا کنیم.<small>راهنمایی، نه تشخیص یا تجویز</small></div></article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#1b4332" />
+    <meta
+      name="description"
+      content="مهریار؛ راهنمای سلامت، آموزش و نوبت‌دهی طب ایرانی."
+    />
+    <title>مهریار | راهنمای سلامت و آموزش</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="utility-bar">
+        <div class="utility-inner">
+          <span>ایتا&nbsp; / &nbsp;تلگرام&nbsp; / &nbsp;اینستاگرام</span
+          ><span>تهران <b>•</b> پاسخ‌گویی ۸–۲۱ <b>•</b> ۰۲۱-۸۸۸۸۴۳۲۱</span>
         </div>
-        <div class="home-chat-prompts" aria-label="پیشنهادهای شروع"><button type="button" data-home-prompt="می‌خواهم یک نشانه را توضیح دهم">توضیح یک نشانه</button><button type="button" data-home-prompt="پزشک مناسب را پیدا کنم">یافتن پزشک</button><button type="button" data-home-prompt="درباره نوبت پرسش دارم">پرسش درباره نوبت</button></div>
-        <form class="home-chat-form" id="home-chat-form"><label class="sr-only" for="home-chat-input">پیام شما به راهنمای مهریار</label><input id="home-chat-input" autocomplete="off" placeholder="نگرانی یا پرسش خود را بنویسید..." /><button type="submit" aria-label="ارسال پیام">↑</button></form>
-        <p class="home-chat-warning">برای نشانه‌های شدید یا ناگهانی، مانند درد قفسه سینه یا تنگی نفس، با اورژانس ۱۱۵ تماس بگیرید.</p>
+      </div>
+      <nav class="main-nav" aria-label="ناوبری اصلی">
+        <a class="brand" href="#top" aria-label="مهریار"
+          ><span class="brand-mark">⌁</span
+          ><span
+            ><strong>مهریار</strong
+            ><small>مرکز خدمات بالینی و آموزشی طب ایرانی</small></span
+          ></a
+        >
+        <div class="nav-links">
+          <a class="active" href="#mehryar-guide">راهنمای مهریار</a
+          ><a href="clinics.html">کلینیک‌ها</a><a href="courses.html">دوره‌ها</a
+          ><a href="#temperament">سبک زندگی</a>
+        </div>
+        <div class="nav-actions">
+          <form class="search-form" id="site-search-form" role="search">
+            <label class="sr-only" for="site-search-input"
+              >جست‌وجو در مهریار</label
+            ><input
+              id="site-search-input"
+              name="q"
+              autocomplete="off"
+              placeholder="جست‌وجو"
+            /><button type="submit" aria-label="جستجو">⌕</button>
+          </form>
+          <a class="profile-link" href="dashboard.html">ورود / پروفایل</a
+          ><a class="appointment-button" href="clinics.html"
+            >رزرو نوبت مطب <span>←</span></a
+          >
+        </div>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="باز کردن منو"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro" id="mehryar-guide">
+        <p>مهریار / راهنمای سلامت و آموزش</p>
+        <h1>بدن‌تان را بهتر بشناسید.</h1>
+        <span
+          >از شناخت عضو تا انتخاب پزشک مناسب، یک مسیر روشن و قابل‌اعتماد پیش روی
+          شماست.</span
+        >
       </section>
-    </section>
 
-    <section class="feature-row" id="learning">
-      <article><span class="feature-icon">▣</span><h2>آموزش از منابع معتبر</h2><p>دوره‌های عمومی طب ایرانی با مدرس متخصص و مرزبندی روشن با درمان و تجویز.</p><a href="courses.html">مشاهده دوره‌ها <b>←</b></a></article>
-      <article id="clinics"><span class="feature-icon">✚</span><h2>دسترسی به پزشک مناسب</h2><p>مقایسه پزشکان، آدرس کلینیک‌ها و انتخاب نوبت حضوری با زمان‌های در دسترس.</p><a href="clinics.html">یافتن کلینیک <b>←</b></a></article>
-      <article id="temperament"><span class="feature-icon">⌁</span><h2>شناخت، نه خودتشخیصی</h2><p>اطلاعات ساده و دقیق درباره اعضای بدن و نشانه‌هایی که نیازمند پیگیری‌اند.</p><a href="chat.html">شروع گفت‌وگو <b>←</b></a></article>
-    </section>
+      <section class="atlas-layout" aria-label="راهنمای مهریار">
+        <aside class="member-drawer" id="member-drawer">
+          <div class="drawer-top">
+            <span class="drawer-icon">✦</span>
+            <div>
+              <p>گفت‌وگوی محرمانه و کوتاه</p>
+              <h2>راهنمای مهریار</h2>
+            </div>
+          </div>
+          <p class="drawer-lead">
+            با چند جمله دربارهٔ نگرانی یا پرسش‌تان، مسیر مناسب برای آموزش،
+            انتخاب پزشک یا نوبت حضوری را پیدا کنید.
+          </p>
+          <div class="drawer-section">
+            <h3>چه چیزی بنویسم؟</h3>
+            <div class="chips">
+              <button
+                type="button"
+                data-home-prompt="موضوع نگرانی‌ام را توضیح می‌دهم"
+              >
+                موضوع نگرانی</button
+              ><button
+                type="button"
+                data-home-prompt="برای مراجعه آماده می‌شوم"
+              >
+                آمادگی برای مراجعه</button
+              ><button
+                type="button"
+                data-home-prompt="دورهٔ آموزشی مناسب می‌خواهم"
+              >
+                دورهٔ آموزشی
+              </button>
+            </div>
+          </div>
+          <div class="drawer-section">
+            <h3>مرز روشن خدمات</h3>
+            <p>
+              راهنمای مهریار تشخیص یا تجویز نمی‌کند؛ در نشانه‌های شدید یا
+              ناگهانی، با اورژانس ۱۱۵ تماس بگیرید.
+            </p>
+          </div>
+          <a class="drawer-cta" href="chat.html"
+            >باز کردن گفت‌وگوی کامل <span>←</span></a
+          >
+          <p class="drawer-note">
+            برای ادامهٔ گفت‌وگو و مشاهدهٔ پیشنهادها، صفحهٔ راهنمای مهریار را باز
+            کنید.
+          </p>
+        </aside>
 
-    <section class="visual-section doctor-showcase" id="doctors" aria-labelledby="clinics-title">
-      <div class="section-heading"><div><p>کلینیک‌های مهریار</p><h2 id="clinics-title">پزشک مناسب، نزدیک‌تر از همیشه</h2><span>پزشکان همکار، بر اساس شهر، زمان پذیرش و مسیر پیگیری شما.</span></div><button class="outline-action" type="button" data-filter-toggle>فیلتر پزشکان <b>⌄</b></button></div>
-      <div class="doctor-filters" hidden><button class="filter-chip active" type="button" data-home-filter="all">همه مراکز</button><button class="filter-chip" type="button" data-home-filter="tehran">تهران</button><button class="filter-chip" type="button" data-home-filter="isfahan">اصفهان</button><button class="filter-chip" type="button" data-home-filter="week">پذیرش این هفته</button></div>
-      <div class="doctor-grid">
-        <article class="doctor-card" data-city="tehran" data-availability="today week"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-4.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک مرکزی ونک</p><small>امروز • ۱۶:۳۰ تا ۲۰:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card" data-city="tehran" data-availability="tomorrow week"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-5.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک نیاوران</p><small>فردا • ۰۹:۳۰ تا ۱۳:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card" data-city="isfahan" data-availability="week"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-7.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>مرکز استان اصفهان</p><small>شنبه • ۱۵:۰۰ تا ۱۹:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card" data-city="tehran" data-availability="week"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-8.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک مرکزی ونک</p><small>یکشنبه • ۱۰:۰۰ تا ۱۴:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card" data-city="tehran" data-availability="week"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-9.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک نیاوران</p><small>دوشنبه • ۱۷:۰۰ تا ۲۰:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card extra-doctor" data-city="tehran" data-availability="week" hidden><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-11.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک مرکزی ونک</p><small>چهارشنبه • ۱۵:۳۰ تا ۱۹:۳۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card extra-doctor" data-city="tehran" data-availability="week" hidden><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-13.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک نیاوران</p><small>پنجشنبه • ۰۹:۰۰ تا ۱۲:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card extra-doctor" data-city="isfahan" data-availability="week" hidden><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-14.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>مرکز استان اصفهان</p><small>شنبه • ۱۰:۳۰ تا ۱۳:۳۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card extra-doctor" data-city="tehran" data-availability="week" hidden><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-15.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک مرکزی ونک</p><small>یکشنبه • ۱۶:۰۰ تا ۱۹:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
-        <article class="doctor-card extra-doctor" data-city="tehran" data-availability="week" hidden><img loading="lazy" decoding="async" src="public/figma-assets/figma-Doctor-portrait-4.png" alt="پزشک همکار مهریار" /><div class="doctor-content"><span class="verified">تأییدشده <b>✓</b></span><h3>پزشک طب ایرانی</h3><p>کلینیک نیاوران</p><small>دوشنبه • ۱۴:۰۰ تا ۱۸:۰۰</small><button type="button" data-appointment>دیدن زمان‌های نوبت <b>←</b></button></div></article>
+        <section class="home-chat-stage" aria-labelledby="home-chat-title">
+          <div class="home-chat-top">
+            <div>
+              <p>راهنمای ناوبری بالینی</p>
+              <h2 id="home-chat-title">با راهنمای مهریار گفتگو کنید.</h2>
+            </div>
+            <span>حریم خصوصی شما مهم است</span>
+          </div>
+          <div
+            class="home-chat-messages"
+            id="home-chat-messages"
+            aria-live="polite"
+          >
+            <article class="home-bot-message">
+              <span>⌁</span>
+              <div>
+                سلام، من راهنمای مهریار هستم. نگرانی یا پرسش‌تان را کوتاه
+                بنویسید تا مسیر آموزشی یا مراجعهٔ مناسب را پیدا کنیم.<small
+                  >راهنمایی، نه تشخیص یا تجویز</small
+                >
+              </div>
+            </article>
+          </div>
+          <div class="home-chat-prompts" aria-label="پیشنهادهای شروع">
+            <button
+              type="button"
+              data-home-prompt="می‌خواهم یک نشانه را توضیح دهم"
+            >
+              توضیح یک نشانه</button
+            ><button type="button" data-home-prompt="پزشک مناسب را پیدا کنم">
+              یافتن پزشک</button
+            ><button type="button" data-home-prompt="درباره نوبت پرسش دارم">
+              پرسش درباره نوبت
+            </button>
+          </div>
+          <form class="home-chat-form" id="home-chat-form">
+            <label class="sr-only" for="home-chat-input"
+              >پیام شما به راهنمای مهریار</label
+            ><input
+              id="home-chat-input"
+              autocomplete="off"
+              placeholder="نگرانی یا پرسش خود را بنویسید..."
+            /><button type="submit" aria-label="ارسال پیام">↑</button>
+          </form>
+          <p class="home-chat-warning">
+            برای نشانه‌های شدید یا ناگهانی، مانند درد قفسه سینه یا تنگی نفس، با
+            اورژانس ۱۱۵ تماس بگیرید.
+          </p>
+        </section>
+      </section>
+
+      <section class="feature-row" id="learning">
+        <article>
+          <span class="feature-icon">▣</span>
+          <h2>آموزش از منابع معتبر</h2>
+          <p>
+            دوره‌های عمومی طب ایرانی با مدرس متخصص و مرزبندی روشن با درمان و
+            تجویز.
+          </p>
+          <a href="courses.html">مشاهده دوره‌ها <b>←</b></a>
+        </article>
+        <article id="clinics">
+          <span class="feature-icon">✚</span>
+          <h2>دسترسی به پزشک مناسب</h2>
+          <p>
+            مقایسه پزشکان، آدرس کلینیک‌ها و انتخاب نوبت حضوری با زمان‌های در
+            دسترس.
+          </p>
+          <a href="clinics.html">یافتن کلینیک <b>←</b></a>
+        </article>
+        <article id="temperament">
+          <span class="feature-icon">⌁</span>
+          <h2>شناخت، نه خودتشخیصی</h2>
+          <p>
+            اطلاعات ساده و دقیق درباره اعضای بدن و نشانه‌هایی که نیازمند
+            پیگیری‌اند.
+          </p>
+          <a href="chat.html">شروع گفت‌وگو <b>←</b></a>
+        </article>
+      </section>
+
+      <section
+        class="visual-section doctor-showcase"
+        id="doctors"
+        aria-labelledby="clinics-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p>کلینیک‌های مهریار</p>
+            <h2 id="clinics-title">پزشک مناسب، نزدیک‌تر از همیشه</h2>
+            <span
+              >پزشکان همکار، بر اساس شهر، زمان پذیرش و مسیر پیگیری شما.</span
+            >
+          </div>
+          <button class="outline-action" type="button" data-filter-toggle>
+            فیلتر پزشکان <b>⌄</b>
+          </button>
+        </div>
+        <div class="doctor-filters" hidden>
+          <button
+            class="filter-chip active"
+            type="button"
+            data-home-filter="all"
+          >
+            همه مراکز</button
+          ><button class="filter-chip" type="button" data-home-filter="tehran">
+            تهران</button
+          ><button class="filter-chip" type="button" data-home-filter="isfahan">
+            اصفهان</button
+          ><button class="filter-chip" type="button" data-home-filter="week">
+            پذیرش این هفته
+          </button>
+        </div>
+        <div class="doctor-grid">
+          <article
+            class="doctor-card"
+            data-city="tehran"
+            data-availability="today week"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-4.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک مرکزی ونک</p>
+              <small>امروز • ۱۶:۳۰ تا ۲۰:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card"
+            data-city="tehran"
+            data-availability="tomorrow week"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-5.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک نیاوران</p>
+              <small>فردا • ۰۹:۳۰ تا ۱۳:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card"
+            data-city="isfahan"
+            data-availability="week"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-7.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>مرکز استان اصفهان</p>
+              <small>شنبه • ۱۵:۰۰ تا ۱۹:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card"
+            data-city="tehran"
+            data-availability="week"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-8.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک مرکزی ونک</p>
+              <small>یکشنبه • ۱۰:۰۰ تا ۱۴:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card"
+            data-city="tehran"
+            data-availability="week"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-9.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک نیاوران</p>
+              <small>دوشنبه • ۱۷:۰۰ تا ۲۰:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card extra-doctor"
+            data-city="tehran"
+            data-availability="week"
+            hidden
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-11.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک مرکزی ونک</p>
+              <small>چهارشنبه • ۱۵:۳۰ تا ۱۹:۳۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card extra-doctor"
+            data-city="tehran"
+            data-availability="week"
+            hidden
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-13.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک نیاوران</p>
+              <small>پنجشنبه • ۰۹:۰۰ تا ۱۲:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card extra-doctor"
+            data-city="isfahan"
+            data-availability="week"
+            hidden
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-14.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>مرکز استان اصفهان</p>
+              <small>شنبه • ۱۰:۳۰ تا ۱۳:۳۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card extra-doctor"
+            data-city="tehran"
+            data-availability="week"
+            hidden
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-15.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک مرکزی ونک</p>
+              <small>یکشنبه • ۱۶:۰۰ تا ۱۹:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+          <article
+            class="doctor-card extra-doctor"
+            data-city="tehran"
+            data-availability="week"
+            hidden
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Doctor-portrait-4.png"
+              alt="پزشک همکار مهریار"
+            />
+            <div class="doctor-content">
+              <span class="verified">تأییدشده <b>✓</b></span>
+              <h3>پزشک طب ایرانی</h3>
+              <p>کلینیک نیاوران</p>
+              <small>دوشنبه • ۱۴:۰۰ تا ۱۸:۰۰</small
+              ><button type="button" data-appointment>
+                دیدن زمان‌های نوبت <b>←</b>
+              </button>
+            </div>
+          </article>
+        </div>
+        <button class="show-more" type="button" data-show-doctors>
+          مشاهده ۵ پزشک دیگر <b>↓</b>
+        </button>
+      </section>
+
+      <section
+        class="visual-section courses-showcase"
+        id="courses"
+        aria-labelledby="courses-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p>آکادمی مهریار</p>
+            <h2 id="courses-title">آموزش‌هایی برای سبک زندگی آگاهانه</h2>
+            <span
+              >دوره‌های ویدیویی با ساختار روشن، زمان مشخص و مدرس متخصص.</span
+            >
+          </div>
+          <a class="section-link" href="courses.html"
+            >کاتالوگ کامل دوره‌ها <b>←</b></a
+          >
+        </div>
+        <div class="course-grid">
+          <article class="course-card">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Course-artwork-17.png"
+              alt="تصویر دوره مقدمات سبک زندگی سالم"
+            />
+            <div>
+              <div class="course-meta">
+                <span>دوره عمومی</span><small>۴ جلسه • ۱۲۰ دقیقه</small>
+              </div>
+              <h3>مقدمات سبک زندگی سالم</h3>
+              <p>
+                آموزش کاربردی با مدرس متخصص، برای ساختن عادت‌های روزمره آگاهانه.
+              </p>
+              <div class="course-footer">
+                <strong>رایگان</strong
+                ><button type="button" data-course>مشاهده دوره <b>←</b></button>
+              </div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Course-artwork-18.png"
+              alt="تصویر دوره تدابیر فصلی در طب ایرانی"
+            />
+            <div>
+              <div class="course-meta">
+                <span>یادگیری ویدیویی</span><small>۳ جلسه • ۷۵ دقیقه</small>
+              </div>
+              <h3>تدابیر فصلی در طب ایرانی</h3>
+              <p>نگاهی روشن به مراقبت روزمره و نقش تغییر فصل در سبک زندگی.</p>
+              <div class="course-footer">
+                <strong>۱۶۹ هزار تومان</strong
+                ><button type="button" data-course>مشاهده دوره <b>←</b></button>
+              </div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Course-artwork-19.png"
+              alt="تصویر دوره شناخت مزاج"
+            />
+            <div>
+              <div class="course-meta">
+                <span>مسترکلاس</span><small>۶ جلسه • ۱۸۰ دقیقه</small>
+              </div>
+              <h3>شناخت مزاج، بدون خودتشخیصی</h3>
+              <p>
+                مرزبندی دقیق آموزش و درمان و دانشی برای گفت‌وگوی بهتر با پزشک.
+              </p>
+              <div class="course-footer">
+                <strong>۲۹۸ هزار تومان</strong
+                ><button type="button" data-course>مشاهده دوره <b>←</b></button>
+              </div>
+            </div>
+          </article>
+          <article class="course-card">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="public/figma-assets/figma-Course-artwork-20.png"
+              alt="تصویر دوره مسیر مراجعه آگاهانه"
+            />
+            <div>
+              <div class="course-meta">
+                <span>دوره عمومی</span><small>۲ جلسه • ۴۵ دقیقه</small>
+              </div>
+              <h3>مسیر مراجعه آگاهانه</h3>
+              <p>
+                برای شناخت قدم بعدی، آماده‌شدن برای ویزیت و ثبت دقیق نشانه‌ها.
+              </p>
+              <div class="course-footer">
+                <strong>رایگان</strong
+                ><button type="button" data-course>مشاهده دوره <b>←</b></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="start-panel" id="start">
+        <div>
+          <p>از کجا شروع کنم؟</p>
+          <h2>نگرانی‌تان را به زبان خودتان توضیح دهید.</h2>
+          <span
+            >عضو موردنظر را مشخص کنید، یا نشانه‌ای را بنویسید تا راهنمای مهریار
+            شما را به مسیر مناسب هدایت کند.</span
+          >
+        </div>
+        <div class="start-actions">
+          <a class="primary-action" href="chat.html">شروع گفت‌وگو <b>←</b></a
+          ><a class="secondary-action" href="#doctors">رزرو نوبت مطب</a>
+        </div>
+      </section>
+
+      <section class="medical-boundary">
+        <strong>راهنمایی، نه تشخیص یا تجویز <b>•</b> اورژانس ۱۱۵</strong
+        ><span
+          >خدمات مشاوره‌ای این پلتفرم صرفاً جهت ناوبری بالینی و تسهیل انتخاب
+          پزشک مناسب است. در موارد حاد، فوراً با اورژانس تماس بگیرید.</span
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <h2>همراه شما در مسیر مراجعه</h2>
+          <p>پشتیبانی • همه‌روزه ۸ تا ۲۱</p>
+          <a href="tel:+982188884321">۰۲۱-۸۸۸۸۴۳۲۱</a
+          ><a href="#top">واتساپ ۰۹۱۲۳۴۵۶۷۸۹</a
+          ><a href="mailto:support@mehryar.ir">support@mehryar.ir</a>
+        </section>
+        <section>
+          <h2>کلینیک‌های مهریار</h2>
+          <p>
+            <b>تهران، ونک</b><br />میدان ونک، ابتدای خیابان ملاصدرا، پلاک ۲۴
+          </p>
+          <p><b>تهران، نیاوران</b><br />خیابان باهنر، مجتمع سلامت ایرانیان</p>
+          <p><b>اصفهان</b><br />پل فردوسی، خیابان کمال اسماعیل</p>
+        </section>
+        <section>
+          <h2>مهریار</h2>
+          <p>
+            مرکز خدمات بالینی و آموزشی طب ایرانی؛ پیوند دانش معتبر، آموزش
+            مسئولانه و دسترسی روشن به پزشک.
+          </p>
+          <div class="socials">
+            <a href="#top">ایتا</a><a href="#top">تلگرام</a
+            ><a href="#top">اینستاگرام</a>
+          </div>
+        </section>
       </div>
-      <button class="show-more" type="button" data-show-doctors>مشاهده ۵ پزشک دیگر <b>↓</b></button>
-    </section>
-
-    <section class="visual-section courses-showcase" id="courses" aria-labelledby="courses-title">
-      <div class="section-heading"><div><p>آکادمی مهریار</p><h2 id="courses-title">آموزش‌هایی برای سبک زندگی آگاهانه</h2><span>دوره‌های ویدیویی با ساختار روشن، زمان مشخص و مدرس متخصص.</span></div><a class="section-link" href="courses.html">کاتالوگ کامل دوره‌ها <b>←</b></a></div>
-      <div class="course-grid">
-        <article class="course-card"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Course-artwork-17.png" alt="تصویر دوره مقدمات سبک زندگی سالم" /><div><div class="course-meta"><span>دوره عمومی</span><small>۴ جلسه • ۱۲۰ دقیقه</small></div><h3>مقدمات سبک زندگی سالم</h3><p>آموزش کاربردی با مدرس متخصص، برای ساختن عادت‌های روزمره آگاهانه.</p><div class="course-footer"><strong>رایگان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
-        <article class="course-card"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Course-artwork-18.png" alt="تصویر دوره تدابیر فصلی در طب ایرانی" /><div><div class="course-meta"><span>یادگیری ویدیویی</span><small>۳ جلسه • ۷۵ دقیقه</small></div><h3>تدابیر فصلی در طب ایرانی</h3><p>نگاهی روشن به مراقبت روزمره و نقش تغییر فصل در سبک زندگی.</p><div class="course-footer"><strong>۱۶۹ هزار تومان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
-        <article class="course-card"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Course-artwork-19.png" alt="تصویر دوره شناخت مزاج" /><div><div class="course-meta"><span>مسترکلاس</span><small>۶ جلسه • ۱۸۰ دقیقه</small></div><h3>شناخت مزاج، بدون خودتشخیصی</h3><p>مرزبندی دقیق آموزش و درمان و دانشی برای گفت‌وگوی بهتر با پزشک.</p><div class="course-footer"><strong>۲۹۸ هزار تومان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
-        <article class="course-card"><img loading="lazy" decoding="async" src="public/figma-assets/figma-Course-artwork-20.png" alt="تصویر دوره مسیر مراجعه آگاهانه" /><div><div class="course-meta"><span>دوره عمومی</span><small>۲ جلسه • ۴۵ دقیقه</small></div><h3>مسیر مراجعه آگاهانه</h3><p>برای شناخت قدم بعدی، آماده‌شدن برای ویزیت و ثبت دقیق نشانه‌ها.</p><div class="course-footer"><strong>رایگان</strong><button type="button" data-course>مشاهده دوره <b>←</b></button></div></div></article>
+      <div class="footer-bottom">
+        <span>© ۱۴۰۵ مهریار. تمامی حقوق محفوظ است.</span
+        ><span>نماد اعتماد الکترونیکی &nbsp; • &nbsp; پرداخت امن شاپرک</span>
       </div>
-    </section>
-
-    <section class="start-panel" id="start"><div><p>از کجا شروع کنم؟</p><h2>نگرانی‌تان را به زبان خودتان توضیح دهید.</h2><span>عضو موردنظر را مشخص کنید، یا نشانه‌ای را بنویسید تا راهنمای مهریار شما را به مسیر مناسب هدایت کند.</span></div><div class="start-actions"><a class="primary-action" href="chat.html">شروع گفت‌وگو <b>←</b></a><a class="secondary-action" href="#doctors">رزرو نوبت مطب</a></div></section>
-
-    <section class="medical-boundary"><strong>راهنمایی، نه تشخیص یا تجویز <b>•</b> اورژانس ۱۱۵</strong><span>خدمات مشاوره‌ای این پلتفرم صرفاً جهت ناوبری بالینی و تسهیل انتخاب پزشک مناسب است. در موارد حاد، فوراً با اورژانس تماس بگیرید.</span></section>
-  </main>
-
-  <footer class="site-footer"><div class="footer-grid"><section><h2>همراه شما در مسیر مراجعه</h2><p>پشتیبانی • همه‌روزه ۸ تا ۲۱</p><a href="tel:+982188884321">۰۲۱-۸۸۸۸۴۳۲۱</a><a href="#top">واتساپ ۰۹۱۲۳۴۵۶۷۸۹</a><a href="mailto:support@mehryar.ir">support@mehryar.ir</a></section><section><h2>کلینیک‌های مهریار</h2><p><b>تهران، ونک</b><br />میدان ونک، ابتدای خیابان ملاصدرا، پلاک ۲۴</p><p><b>تهران، نیاوران</b><br />خیابان باهنر، مجتمع سلامت ایرانیان</p><p><b>اصفهان</b><br />پل فردوسی، خیابان کمال اسماعیل</p></section><section><h2>مهریار</h2><p>مرکز خدمات بالینی و آموزشی طب ایرانی؛ پیوند دانش معتبر، آموزش مسئولانه و دسترسی روشن به پزشک.</p><div class="socials"><a href="#top">ایتا</a><a href="#top">تلگرام</a><a href="#top">اینستاگرام</a></div></section></div><div class="footer-bottom"><span>© ۱۴۰۵ مهریار. تمامی حقوق محفوظ است.</span><span>نماد اعتماد الکترونیکی &nbsp; • &nbsp; پرداخت امن شاپرک</span></div></footer>
-  <script src="script.js" defer></script>
-</body>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
 </html>
